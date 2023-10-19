@@ -93,6 +93,17 @@ footer {
     padding: 10px 0;
 }
 
+.blog-posts{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: min(1200px, 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
 .post{
     width: calc(33% - 10px);
     overflow: hidden;
