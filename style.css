@@ -7,20 +7,52 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-
 header {
     background-color: #333;
     color: #fff;
     padding: 25px 0;
+    text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+.menu li {
+    margin-right: 20px;
+}
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .search {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu li {
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu li {
+        margin-right: 10px;
+    }
 }
 
 .logo {
@@ -127,7 +159,7 @@ footer {
 
 .post-content h3{
     font-size: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 1px;
 }
 
 .date{
