@@ -45,9 +45,31 @@
             <span class="date">ADJNKAMADSA</span>
         </div>
     </div>
+
+    <button id="likeButton">Like</button>
 <main>
     <section class="featured-games">
     </section>
 </main>
 </body>
+<script>
+  // Dapatkan tombol "Like" berdasarkan ID
+  const likeButton = document.getElementById("likeButton");
+
+  // Buat variabel untuk melacak status tombol
+  let isLiked = false;
+
+  // Tambahkan event listener untuk mengubah status tombol saat diklik
+  likeButton.addEventListener("click", function () {
+    if (isLiked) {
+      // Jika tombol sudah "Liked," ubah teksnya menjadi "Dislike" dan atur statusnya ke "Disliked"
+      likeButton.textContent = "Dislike";
+      isLiked = false;
+    } else {
+      // Jika tombol belum "Liked," ubah teksnya menjadi "Like" dan atur statusnya ke "Liked"
+      likeButton.textContent = "Like";
+      isLiked = true;
+    }
+  });
+</script>
 </html>
