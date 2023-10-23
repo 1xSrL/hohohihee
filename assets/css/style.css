@@ -9,10 +9,14 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-image: url('assets/photo/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
     padding: 25px 0;
+    opacity: 0.8;
 }
+
 
 nav {
     display: flex;
