@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faruq jahat</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo">H0H0H1H3h</div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
     <nav>
         <div class="logo">hohohihee</div>
         <ul class="menu">
@@ -16,12 +42,12 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-</header>
+</div>
 <div class="blog-posts">
     <div class="post">
         <img src="assets/photo/alvin.png" alt="" class="post-img">
         <div class="post-content">
-            <h3>Panca,Masih bingung dengan tujuan hidup</h3>
+            <h3>Panca, Masih bingung dengan tujuan hidup</h3>
             <span class="date">HWHEWEHWHEW</span>
         </div>
     </div>
@@ -37,35 +63,31 @@
     <div class="post">
         <img src="assets/photo/3.jpg" alt="" class="post-img">
         <div class="post-content">
-            <h3>Faruq,Oleh metu mbek mak tapi maem sek</h3>
+            <h3>Faruq, Oleh metu mbek mak tapi maem sek</h3>
             <span class="date">ADJNKAMADSA</span>
         </div>
     </div>
 
-    <button id="likeButton">Like</button>
+    <button id="likeButton" class="btn btn-primary">Like</button>
+</div>
 <main>
     <section class="featured-games">
     </section>
 </main>
 </body>
 <script>
-  // Dapatkan tombol "Like" berdasarkan ID
-  const likeButton = document.getElementById("likeButton");
+    const likeButton = document.getElementById("likeButton");
 
-  // Buat variabel untuk melacak status tombol
-  let isLiked = false;
+    let isLiked = false;
 
-  // Tambahkan event listener untuk mengubah status tombol saat diklik
-  likeButton.addEventListener("click", function () {
-    if (isLiked) {
-      // Jika tombol sudah "Liked," ubah teksnya menjadi "Dislike" dan atur statusnya ke "Disliked"
-      likeButton.textContent = "Dislike";
-      isLiked = false;
-    } else {
-      // Jika tombol belum "Liked," ubah teksnya menjadi "Like" dan atur statusnya ke "Liked"
-      likeButton.textContent = "Like";
-      isLiked = true;
-    }
-  });
+    likeButton.addEventListener("click", function () {
+        if (isLiked) {
+            likeButton.textContent = "Dislike";
+            isLiked = false;
+        } else {
+            likeButton.textContent = "Like";
+            isLiked = true;
+        }
+    });
 </script>
 </html>
