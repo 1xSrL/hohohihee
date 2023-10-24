@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +9,18 @@
         body {
             background: #f0f0f0 url('assets/photo/background.png') center top no-repeat;
             background-size: cover;
+        }
+
+        .row:hover {
+            background-color: palevioletred;
+        }
+
+        .row:hover h4 {
+            color: black;
+        }
+
+        .row:hover a {
+            color: black;
         }
     </style>
 </head>
@@ -39,5 +50,21 @@
         </div>
     </nav>
 </header>
+<main>
+    <section id="home">
+        <div class="home-content">
+            <h1 style="color: white;">Welcome to Our Website</h1>
+            <div class="row rounded p-3" style="transition: background-color 0.5s;">
+                <div class="col-md-12">
+                    <h4 style="color: white;">Discover the latest and greatest in our world.
+                        <p>look into our data which include our Bio, Contact and much more!</h4></p>
+                </div>
+                <div class="col-md-12">
+                    <a href="javascript:void(0);" id="followButton" class="btn btn-primary" style="color: white;">Follow</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 </body>
 </html>
