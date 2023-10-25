@@ -1,11 +1,16 @@
-<script>
-    const followButton = document.getElementById("followButton");
+const postTimeElement = document.getElementById("postTime");
 
-    followButton.addEventListener("click", function() {
-    if (followButton.textContent === "Follow") {
-    followButton.textContent = "Following";
+
+const postTime = new Date(postTimeElement.textContent);
+
+
+const currentTime = new Date();
+
+
+const timeDiffInHours = Math.abs(currentTime - postTime) / 36e5;
+
+
+if (timeDiffInHours < 24) {
+    postTimeElement.textContent = "Hari ini";
 } else {
-    followButton.textContent = "Follow";
 }
-});
-</script>
