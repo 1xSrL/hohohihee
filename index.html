@@ -3,26 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>faruq jahat</title>
+    <title>Your Title</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             background: #f0f0f0 url('assets/photo/background.png') center top no-repeat;
             background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .row:hover {
-            background-color: palevioletred;
+        .new-grid {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .row:hover h4 {
-            color: black;
+        .logo img {
+            max-width: 100px;
+            max-height: 100px;
+            border: 2px solid #3498db;
+            border-radius: 50%;
+            transition: transform 0.3s;
         }
 
-        .row:hover a {
-            color: black;
+        .logo img:hover {
+            transform: scale(1.1);
         }
+
+        .btn {
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #2677a8;
+        }
+
+        .welcome-text {
+            font-family: 'Times New Roman', serif;
+            font-size: 36px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Your other CSS styles here */
     </style>
 </head>
 <body>
@@ -53,20 +94,21 @@
 </header>
 <main>
     <section id="home">
-        <div class="home-content">
-            <h1 style="color: white;">Welcome to Our Website</h1>
-            <div class="row rounded p-3" style="transition: background-color 0.5s;">
-                <div class="col-md-12">
-                    <h4 style="color: white;">Discover the latest and greatest in our world.</h4>
-                </div>
-                <div class="col-md-12">
-                    <a href="javascript:void(0);" id="followButton" class="btn btn-primary" style="color: white;">Follow</a>
+        <div class="container">
+            <h1 class="text-center welcome-text">Welcome to Our Website</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="new-grid rounded">
+                        <div class="logo">
+                            <img src="assets/photo/logo.png" alt="Your Logo">
+                        </div>
+                        <button class="btn btn-primary" id="followButton">Follow</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
-
 <script>
     let followCount = 0;
     const followButton = document.getElementById("followButton");
