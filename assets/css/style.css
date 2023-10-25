@@ -52,32 +52,6 @@ nav {
 .menu a:hover {
     color: #ff4d00;
 }
-
-.search {
-    display: flex;
-    align-items: center;
-}
-
-.search input[type="text"] {
-    padding: 5px;
-    border: none;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-.search button {
-    background-color: #ff4d00;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.search button:hover {
-    background-color: #d83900;
-}
-
 main {
     max-width: 1200px;
     margin: 20px auto;
@@ -97,56 +71,69 @@ footer {
     padding: 10px 0;
 }
 
-.blog-posts{
-    margin-left: 50px;
-    margin-top: 50px;
-    width: min(1200px, 100%);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.class container{
+    margin-top: 250px;
+}
+.btn{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
     cursor: pointer;
-}
-
-.post{
-    width: calc(33% - 10px);
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
     overflow: hidden;
+    border: 1%;
 }
-
-.post-img{
-    border-color: white;
+.btn1,.btn2{
+    color: #3498db;
+}
+.btn3,.btn4{
+    color: #fff;
+}
+.btn1:hover,.btn2:hover{
+    color: #fff;
+}
+.btn3:hover,.btn4:hover{
+    color: #3498db;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
     width: 100%;
-    border-radius: 10px;
-    transition: .3s linear;
+    height: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.8s;
 }
-
-.post-content{
-    background-color: #ffffffdd;
-    margin: 0 20px;
-    padding: 30px;
-    border-radius: 6px;
-    transform: translateY(-60px);
-    transition: .3s linear;
+.btn1::before,.btn3::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
 }
+<<<<<<< Updated upstream
 
 .post-content h3{
     font-size: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+=======
+.btn2::before,.btn4::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+>>>>>>> Stashed changes
 }
-
-.date{
-    font-size: 15px;
-    font-style: italic;
-    color: #e77f67;
+.btn3::before,.btn4::before{
+    height: 180%;
 }
-
-.post:hover .post-img{
-    transform: translateY(20px);
+.btn1:hover::before,.btn2:hover::before{
+    height: 180%;
 }
-
-.post:hover .post-content{
-    transform: translateY(-80px);
+.btn3:hover::before,.btn4:hover::before{
+    height: 0;
 }
+<<<<<<< Updated upstream
 
 @media screen and (max-width: 1200px){
     .blog-posts{
@@ -156,3 +143,47 @@ footer {
         width: min(600px, 100%);
     }
 }
+.row:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+=======
+h1{
+    margin-left: 150px;
+}
+.box{
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.box hover input{
+    width: 200px;
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a .fas{
+    color: #1daf;
+    font-size: 18px;
+}
+.profile {
+ border: 2px solid #ccc;
+  border-radius: 50%;
+ width: 100px;
+ height: 100px;
+transition: transform 0.3s;
+ }
+.profile:hover {
+ transform: scale(1.1);
+ }
+
