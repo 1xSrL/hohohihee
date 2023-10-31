@@ -1,8 +1,17 @@
-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;https://open.spotify.com/playlist/3dEWWqH4Vo5jxvk4p9rvIO?si=fb2e1fe7fcec4da2
-  color: rgb(var(--bs-tertiary-color-rgb));
+body, .carousel {
+  margin: 0;
+  padding: 0;
 }
+.carousel {
+  height: 100vh;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
 
 .nav-scroller {
   width: 100%;
@@ -15,22 +24,17 @@ body {
 .carousel {
   margin-bottom: 4rem;
 }
-/* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-/* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
 }
 
 
-/* MARKETING CONTENT
--------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -87,5 +91,9 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
