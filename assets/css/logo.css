@@ -3,8 +3,13 @@
     transform: scale(1.1);
     transition: transform 0.5s;
 }
+.btn.border-danger {
+    background-color: transparent;
+    border: 2px solid purple;
+    color: white;
+}
 
-.tag{
-    font-weight: 6px;
-    margin-left: 35px;
+.btn.border-danger:hover {
+    background-color: purple;
+    transition: background-color 0.3s;
 }
