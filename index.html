@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<head><script src="assets/js/color-modes.js"></script>
+<head>
+    <script src="assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +19,10 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        .carousel-caption h1,
+        .carousel-caption p.opacity-75 {
+            color: white;
+        }
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -41,41 +46,18 @@
             box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
         }
 
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
         .bi {
             vertical-align: -.125em;
             fill: currentColor;
         }
 
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller{
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
 
         .btn-bd-primary {
             --bd-violet-bg: #712cf9;
             --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
             --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
+            --bs-btn-color: white;
             --bs-btn-bg: var(--bd-violet-bg);
             --bs-btn-border-color: var(--bd-violet-bg);
             --bs-btn-hover-color: var(--bs-white);
@@ -99,7 +81,6 @@
     <link href="assets/css/carousel.css" rel="stylesheet">
 </head>
 <body>
-<iframe src="header.html" frameborder="0" width="100%" height="150"></iframe>
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -155,20 +136,20 @@
 <header data-bs-theme="dark">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Carousel</a>
+            <a class="navbar-brand" href="#">H0H0H1H3</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="academy.html">ACADEMY</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="article.html">ARTICLE</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -190,32 +171,32 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <img src="assets/photo/headline1.jpg" class="d-block w-100" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption text-start">
-                        <h1>Example headline.</h1>
-                        <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                        <h1>Find More</h1>
+                        <p class="opacity-75">make and find new experience with us!</p>
                         <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <img src="assets/photo/headline2.jpg" class="d-block w-100" alt="Your Image">
                 <div class="container">
                     <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Some representative placeholder content for the second slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        <h1>Your Headline</h1>
+                        <p>Your placeholder content here.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Your Button Text</a></p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                <img src="assets/photo/headline3.jpg" class="d-block w-100" alt="Your Image">
                 <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>One more for good measure.</h1>
-                        <p>Some representative placeholder content for the third slide of this carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    <div class="carousel-caption">
+                        <h1>Your Headline</h1>
+                        <p>Your placeholder content here.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Your Button Text</a></p>
                     </div>
                 </div>
             </div>
@@ -230,37 +211,47 @@
         </button>
     </div>
 
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
     <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                <h2 class="fw-normal">Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                <h2 class="fw-normal">Heading</h2>
-                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-                <h2 class="fw-normal">Heading</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
-                <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+                <div class="text-center">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <image xlink:href="assets/photo/logo.png" width="100%" height="100%" />
+                    </svg>
+                    <button id="followButton" class="btn btn-primary mt-2" onclick="toggleFollow()">Follow</button>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <p><h4>Come and join us in our community!</h4></p>
+                <p><h4>Find more experience with the same people in our interest</h4></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let following = false;
+
+        function toggleFollow() {
+            const followButton = document.getElementById("followButton");
+            if (following) {
+                followButton.textContent = "Follow";
+            } else {
+                followButton.textContent = "Following";
+            }
+            following = !following;
+        }
+    </script>
 
 
-        <!-- START THE FEATURETTES -->
+
+
+
+
+
+
+
+    <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
 
@@ -299,11 +290,6 @@
         </div>
 
         <hr class="featurette-divider">
-
-
-    </div><!-- /.container -->
-
-
     <!-- FOOTER -->
     <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>
