@@ -96,4 +96,24 @@ body, .carousel {
   max-width: 1200px;
   margin: 0 auto;
 }
+.bi-twitter:hover {
+  fill: #1DA1F2;
+}
+
+.bi-instagram:hover {
+  fill: #E1306C;
+}
+
+.bi-whatsapp:hover {
+  fill: #25D366;
+}
+.bi-twitter {
+  margin-right: 10px;
+}
+
+.bi-instagram {
+  margin-right: 10px;
+}
+
+
 
