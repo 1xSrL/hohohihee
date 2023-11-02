@@ -114,6 +114,43 @@ body, .carousel {
 .bi-instagram {
   margin-right: 10px;
 }
+/* Add these CSS styles to your existing stylesheet */
+footer {
+  padding: 30px 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+ul.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.social-icon svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+address {
+  font-size: 16px;
+  margin: 0;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #e0e0e0;
+}
+
 
 
 
