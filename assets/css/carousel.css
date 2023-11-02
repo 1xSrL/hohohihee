@@ -144,13 +144,53 @@ address {
 footer a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.5s;
 }
 
 footer a:hover {
   color: #e0e0e0;
 }
+.carousel-inner img {
+  filter: blur(3px);
+}
+.follow-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
+.follow-button:hover {
+  background-color: #0056b3;
+}
+.common-button {
+  padding: 10px 20px;
+  border-radius: 0;
+  transition: background-color 0.3s;
+  height: 100%;
+}
+#likeButton {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 
-
-
+.follow-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.follow-button.ml-2 {
+  margin-left: 10px;
+}
+.featurette-image-svg:hover {
+// Add your hover styles here
+// For example:
+transform: scale(1.1);
+  transition: transform 0.3s;
+}
