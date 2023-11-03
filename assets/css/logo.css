@@ -13,3 +13,96 @@
     background-color: purple;
     transition: background-color 0.3s;
 }
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+.dd
+{
+    margin-left: 45%;
+    margin-top: 100px;
+    position: relative;
+    width: 190px;
+    height: 190px;
+    transition: 1s;
+    transition-delay: 4s;
+}
+.dd:hover
+{
+    transform: translateY(-20px);
+    transition-delay: 4s;
+}
+.dd .face
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+.dd .face img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+.dd .face img.logo1
+{
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    transition: 2s;
+    transition-delay: 2s;
+}
+.dd:hover .face img.logo1
+{
+    opacity: 0;
+    transition-delay: 0s;
+}
+.dd .face img.logo3
+{
+    opacity: 0;
+    transition: 2s;
+    transition-delay: 0s;
+}
+.dd:hover .face img.logo3
+{
+    opacity: 1;
+    transition-delay: 2s;
+}
+h1
+{
+    position: absolute;
+    left: -55%;
+    margin: 0;
+    padding: 0;
+    width: 220%;
+    text-align: center;
+    opacity: 0;
+    font-weight: 30;
+    transition: 0.3s;
+    font-size: 10px;
+    transition-delay: 2s;
+}
+h1 span
+{
+    display: inline-block;
+    font-weight: 200;
+    color: #ff2544;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(150px);
+    transition-delay: 2s;
+}
+.dd:hover h1 span
+{
+    transition-delay: 4s;
+    opacity: 1;
+    transform: translateX(5px);
+}
+.dd:hover h1
+{
+    opacity: 1;
+    bottom: -20px;
+    transition-delay: 4s;
+}
