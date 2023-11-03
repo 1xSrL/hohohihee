@@ -4,7 +4,41 @@
     <script src="assets/js/color-modes.js">
         <script src="assets/css/bootstrap.mon.css">
     </script>
+    <script>
+        let following = false;
+        let grayscaleCount = 0;
 
+        function toggleFollow() {
+            const followButton = document.getElementById("followButton");
+            if (following) {
+                followButton.textContent = "Follow";
+            } else {
+                followButton.textContent = "Following";
+            }
+            following = !following;
+
+            // Check if "Follow" button was clicked and perform grayscale effect
+            if (!following) {
+                grayscaleContent();
+            }
+        }
+
+        function grayscaleContent() {
+            // Check if the grayscaleCount is less than 5 and apply grayscale effect
+            if (grayscaleCount < 5) {
+                const content = document.getElementById("content");
+                content.classList.add("grayscale-effect");
+                grayscaleCount++;
+            } else {
+                grayscaleCount = 0; // Reset the count after 5 grayscale toggles
+                const content = document.getElementById("content");
+                content.classList.remove("grayscale-effect");
+            }
+        }
+
+        const followButton = document.getElementById("follow-button");
+        followButton.addEventListener("click", toggleFollow);
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -21,7 +55,16 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-
+        .form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .input-container {
+            margin-bottom: 15px;
+        }
         .container {
             max-width: 1200px;
         }
@@ -36,19 +79,6 @@
         .btn {
             border-radius: 0;
             padding: 10px 20px;
-        }
-        .follow-button {
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .follow-button:hover {
-            background-color: #0056b3;
         }
         .carousel-caption h1,
         .carousel-caption{
@@ -253,30 +283,61 @@
 
     <hr class="featurette-divider">
 
+
+    <form class="form">
+        <p class="form-title">Sign in to your account</p>
+        <div class="input-container">
+            <input placeholder="Enter email" type="email">
+            <span>
+            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </div>
+        <div class="input-container">
+            <input placeholder="Enter password" type="password">
+
+            <span>
+            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+              <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </div>
+        <button class="submit" type="submit">
+            Sign in
+        </button>
+
+        <p class="signup-link">
+            No account?
+            <a href="">Sign up</a>
+        </p>
+    </form>
+
+
+    <hr class="featurette-divider">
+
     <div class="row">
         <div class="col-md-5">
             <div class="text-center">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
-                    <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
+                <img src="assets/photo/about1.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="500" height="500">
             </div>
         </div>
         <div class="col-md-4">
             <div class="position-sticky" style="top: 2rem;">
                 <div class="p-4 mb-3 bg-body-tertiary rounded">
-                    <h4 class="fst-italic">About</h4>
-                    <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+                    <h4 class="fst-italic">CO-OPERATIVE</h4>
+                    <p class="mb-0">Looking for Excitement and Teamwork? Discover the Thrill of Co-operative Games! </p>
                     <div class="text-center mt-3">
                         <button id="likeButton" class="btn btn-primary common-button">
                             <span id="likeCount">0</span> Likes
                         </button>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+    </div>
+
 </main>
 
 
@@ -285,24 +346,56 @@
 
 
 
-    <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-3 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-                <h3 class="mb-0">Post title</h3>
-                <div class="mb-1 text-body-secondary">Nov 11</div>
-                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Continue reading
-                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                </a>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                    <h3 class="mb-0">Post title</h3>
+                    <div class="mb-1 text-body-secondary">Nov 11</div>
+                    <p class="mb-auto">This is a wider card with supporting text below.</p>
+                    <button>
+                        <p>Follow me</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"/>
+                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                    </svg>
+                </div>
             </div>
-            <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">New Category</strong>
+                    <h3 class="mb-0">New Post Title</h3>
+                    <div class="mb-1 text-body-secondary">Nov 12</div>
+                    <p class="mb-auto">This is another wider card with supporting text below.</p>
+                    <button>
+                        <p>Follow me</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"/>
+                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
 
 
     <hr class="featurette-divider">
@@ -338,8 +431,6 @@
                             </a>
                         </li>
                     </ul>
-                    </button>
-                    <button class="follow-button ml-2 common-button" id="followButton" onclick="toggleFollow()">Follow</button>
                 </div>
                 <div class="col-md-4">
                     <h3>Contact Us</h3>
@@ -382,6 +473,7 @@
             }
             following = !following;
         }
+
     </script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
