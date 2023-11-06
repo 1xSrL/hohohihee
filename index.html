@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto" xmlns="http://www.w3.org/1999/html">
+<html lang="en" data-bs-theme="dark" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <script>
         function playVideo() {
@@ -171,7 +171,7 @@
         }
         .custom-play-pause-buttons {
             position: absolute;
-            bottom: 60px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -279,6 +279,11 @@
                             <a class="nav-link" href="store.html">STORE</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -287,11 +292,6 @@
 <main>
 
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <video class="d-block w-100" controls>
@@ -305,48 +305,14 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <video class="d-block w-100" controls>
-                    <source src="assets/video/video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>Level Up Your Collection</h1>
-                        <p><a class="btn btn-lg btn-primary" href="#">Play Now</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <video class="d-block w-100" controls>
-                    <source src="assets/video/video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Discover More</h1>
-                        <p><a class="btn btn-lg btn-primary" href="store.html">Browse Collections</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
         <div class="custom-play-pause-buttons">
             <button class="play-button" onclick="playVideo()"></button>
             <button class="pause-button" onclick="pauseVideo()"></button>
+            </div>
         </div>
     </div>
-    </div>
+</main>
 
-
-    <hr class="featurette-divider">
 
 
     <form class="form">
@@ -385,7 +351,7 @@
     <div class="row">
         <div class="col-md-5">
             <div class="text-center">
-                <img src="assets/photo/about1.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="500" height="500">
+                <img src="assets/photo/about1.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
             </div>
         </div>
         <div class="col-md-4">
