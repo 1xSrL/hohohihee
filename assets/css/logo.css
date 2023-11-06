@@ -16,11 +16,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 .dd
 {
-    margin-left: 45%;
-    margin-top: 100px;
+    margin-left: 50%;
+    margin-top: 20px;
     position: relative;
-    width: 190px;
-    height: 190px;
+    width: 10px;
+    height: 10px;
     transition: 1s;
     transition-delay: 4s;
 }
@@ -34,8 +34,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: 10px;
+    height: 10px;
 }
 .dd .face img
 {
@@ -43,14 +43,14 @@
     top: 0;
     left: 0;
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 10px;
+    height: 10px;
 }
 .dd .face img.logo1
 {
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 10px;
+    height: 10px;
     transition: 2s;
     transition-delay: 2s;
 }
@@ -105,4 +105,6 @@ h1 span
     opacity: 1;
     bottom: -20px;
     transition-delay: 4s;
+}
+.tag{
 }
