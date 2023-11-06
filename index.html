@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto" xmlns="http://www.w3.org/1999/html">
 <head>
+    <script>
+        function playVideo() {
+            // Get the video element and play it
+            var video = document.querySelector("video");
+            if (video) {
+                video.play();
+            }
+        }
+
+        function pauseVideo() {
+            // Get the video element and pause it
+            var video = document.querySelector("video");
+            if (video) {
+                video.pause();
+            }
+        }
+    </script>
     <script src="assets/js/color-modes.js">
         <script src="assets/css/bootstrap.mon.css">
     </script>
@@ -152,6 +169,39 @@
         .carousel-inner img {
             filter: blur(3px);
         }
+        .custom-play-pause-buttons {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button,
+        .pause-button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button::after {
+            content: "\25B6";
+            font-size: 24px;
+            color: black;
+        }
+
+        .pause-button::after {
+            content: "\II";
+            font-size: 24px;
+            color: black;
+        }
     </style>
     <link href="assets/css/carousel.css" rel="stylesheet">
 </head>
@@ -226,7 +276,7 @@
                             <a class="nav-link" href="academy.html">ACADEMY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="article.html">STORE</a>
+                            <a class="nav-link" href="store.html">STORE</a>
                         </li>
                     </ul>
                 </div>
@@ -244,7 +294,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/photo/headline1.jpg" class="d-block w-100" alt="First slide">
+                <video class="d-block w-100" controls>
+                    <source src="assets/video/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Find More</h1>
@@ -253,7 +306,10 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/photo/headline2.jpg" class="d-block w-100" alt="Your Image">
+                <video class="d-block w-100" controls>
+                    <source src="assets/video/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="container">
                     <div class="carousel-caption text-end">
                         <h1>Level Up Your Collection</h1>
@@ -262,11 +318,14 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/photo/headline3.jpg" class="d-block w-100" alt="Your Image">
+                <video class="d-block w-100" controls>
+                    <source src="assets/video/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Discover More</h1>
-                        <p><a class="btn btn-lg btn-primary" href="article.html">Browse Collections</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="store.html">Browse Collections</a></p>
                     </div>
                 </div>
             </div>
@@ -279,7 +338,13 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+        <div class="custom-play-pause-buttons">
+            <button class="play-button" onclick="playVideo()"></button>
+            <button class="pause-button" onclick="pauseVideo()"></button>
+        </div>
     </div>
+    </div>
+
 
     <hr class="featurette-divider">
 
