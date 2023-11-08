@@ -453,5 +453,22 @@ button:hover {
 .name:hover {
   cursor: pointer;
 }
+.img-border {
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Positioning context for the shadow */
+}
+
+.img-border::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 2) 0%, transparent 100%);
+  z-index: 1;
+}
+
+
+
 
 
