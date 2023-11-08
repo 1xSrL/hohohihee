@@ -1,451 +1,346 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-<head>
-    <script src="assets/js/color-modes.js">
-        <script src="assets/css/bootstrap.mon.css">
-    </script>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Perusahaan XYZ</title>
-
+    <title>Bootstrap Example</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="assets/css/carousel.css" rel="stylesheet">
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #000000;
         }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            width: 100%;
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
+        header[data-bs-theme="dark"] {
+            background-color: #212529;
+            color:#000000;
+            padding: 40px 0;
             text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
         }
 
-        .btn-bd-primary {
-            --bd-violet-bg: #712cf9;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-            --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
-            --bs-btn-bg: var(--bd-violet-bg);
-            --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg: #6528e0;
-            --bs-btn-hover-border-color: #6528e0;
-            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #5a23c8;
-            --bs-btn-active-border-color: #5a23c8;
+        nav {
+            background-color: #343a40;
+            color: #000000;
+            padding: 10px;
+            text-align: center;
         }
 
-        .bd-mode-toggle {
-            z-index: 1500;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important;
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .events {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .event-card {
+            width: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .event-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-card .event-details {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+            margin: 0;
+            height: auto;
+            background: transparent;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button {
+            --border-right: 6px;
+            --text-stroke-color: rgba(255,255,255,0.6);
+            --animation-color: #37FF8B;
+            --fs-size: 2em;
+            letter-spacing: 3px;
+            text-decoration: none;
+            font-size: var(--fs-size);
+            font-family: "Arial";
+            position: relative;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text-stroke-color);
+        }
+
+        .hover-text {
+            position: absolute;
+            box-sizing: border-box;
+            content: attr(data-text);
+            color: var(--animation-color);
+            width: 0%;
+            inset: 0;
+            border-right: var(--border-right) solid var(--animation-color);
+            overflow: hidden;
+            transition: 0.5s;
+            -webkit-text-stroke: 1px var(--animation-color);
+        }
+
+        .button:hover .hover-text {
+            width: 100%;
+            filter: drop-shadow(0 0 23px var(--animation-color))
         }
     </style>
-    <link href="assets/css/features.css" rel="stylesheet">
 </head>
 <body>
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">H0H0H1H3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academy.html">ACADEMY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">STORE</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<h1 class="text-2xl font-bold uppercase md:text-5xl">
+    <span class="text-danger ml-2"<span class="text-red">KALKUN</span> <span class="text-white">EVENT</span>
+</h1>
+<label for="voice-search" class="block text-2xl font-bold md:text-3xl w-full" style="color: white;">Search Event</label>
+<input type="text" id="voice-search" name="keyword" class="block w-full appearance-none rounded bg-transparent border border-igdx-dark-blue pl-10 pr-3 py-2.5 placeholder-white/50 autofill:bg-transparent focus:border-igdx-dark-blue-2 focus:outline-none focus:ring-igdx-dark-blue-2 text-sm" placeholder="Search">
+    <button class="button" id="filter-date" type="button">
+        Filter Date
+        <svg class="h-5 w-5 text-white ml-2.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M13.96 9.282l-2.985 3.007a.828.828 0 01-.551.22.749.749 0 01-.532-.22L6.907 9.283a.721.721 0 01-.184-.818A.755.755 0 017.417 8h5.992c.304 0 .578.183.694.464.117.281.074.605-.142.818z" fill="#fff"></path>
+        </svg>
+        <div class="hover-text" data-text="Filter Date"></div>
+    </button>
 <div class="container">
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-        <symbol id="check2" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-        </symbol>
-        <symbol id="circle-half" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-        </symbol>
-        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-        </symbol>
-        <symbol id="sun-fill" viewBox="0 0 16 16">
-            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-        </symbol>
-    </svg>
+    <div class="events">
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event1.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 1</h2>
+                <p>Date: January 1, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-                id="bd-theme"
-                type="button"
-                aria-expanded="false"
-                data-bs-toggle="dropdown"
-                aria-label="Toggle theme (auto)">
-            <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            <span class="visually-hidden" id="bd-theme-text">faruq</span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-                    Light
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event2.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 2</h2>
+                <p>Date: February 15, 2023</p>
+                <button>
+                    More
                 </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-                    Dark
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event3.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 3</h2>
+                <p>Date: March 30, 2023</p>
+                <button>
+                    More
                 </button>
-            </li>
-            <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-                    Auto
-                    <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-                </button>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
-
-
-    <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">H0H0H1H3</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="academy.html">ACADEMY</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="article.html">ARTICLE</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <h1 class="visually-hidden">belajar</h1>
-
-        <div class="container px-4 py-5" id="featured-3">
-            <h2 class="pb-2 border-bottom">SOCIAL MEDIA</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div class="feature col">
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                        </svg>
-
-                    </div>
-                    <h3 class="fs-2 text-body-emphasis">Facebook</h3>
-                    <p>Terhubung dengan teman-teman, keluarga, dan dunia di Facebook. Bagikan momen-momen spesial, ikuti berita terkini, dan temukan hal-hal menarik di komunitas yang luas. Jelajahi berbagai konten, mulai dari foto hingga video</p>
-                    <a href="#" class="icon-link">
-                        Call to action
-                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                </div>
-                <div class="feature col">
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                        </svg>
-                    </div>
-                    <h3 class="fs-2 text-body-emphasis">Twitter</h3>
-                    <p>Twitter adalah platform sosial yang membawa dunia ke genggamanmu. Temukan percakapan yang sedang tren, ikuti tokoh inspiratif, dan sampaikan pendapatmu dalam 280 karakter. Sambut berita terkini, jadilah bagian dari gerakan,</p>
-                    <a href="#" class="icon-link">
-                        Call to action
-                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                </div>
-                <div class="feature col">
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                        </svg>
-                    </div>
-                    <h3 class="fs-2 text-body-emphasis">Instagram</h3>
-                    <p>Instagram, tempat di mana gambar berbicara lebih dari seribu kata. Ekspresikan kreativitasmu melalui foto, video, dan cerita pendek. Jelajahi dunia, temui teman-teman baru, dan bagikan momen-momen berharga dalam hidupmu. Selamat datang di Instagram, tempat di mana setiap gambar memiliki cerita uniknya!</p>
-                    <a href="#" class="icon-link">
-                        Call to action
-                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container px-4 py-5" id="hanging-icons">
-            <h2 class="pb-2 border-bottom">CROSS PLATFROM GAME</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-android2" viewBox="0 0 16 16">
-                            <path d="m10.213 1.471.691-1.26c.046-.083.03-.147-.048-.192-.085-.038-.15-.019-.195.058l-.7 1.27A4.832 4.832 0 0 0 8.005.941c-.688 0-1.34.135-1.956.404l-.7-1.27C5.303 0 5.239-.018 5.154.02c-.078.046-.094.11-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.697 3.697 0 0 0 3.5 5.02h9c0-.75-.208-1.44-.623-2.072a4.266 4.266 0 0 0-1.664-1.476ZM6.22 3.303a.367.367 0 0 1-.267.11.35.35 0 0 1-.263-.11.366.366 0 0 1-.107-.264.37.37 0 0 1 .107-.265.351.351 0 0 1 .263-.11c.103 0 .193.037.267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264Zm4.101 0a.351.351 0 0 1-.262.11.366.366 0 0 1-.268-.11.358.358 0 0 1-.112-.264c0-.103.037-.191.112-.265a.367.367 0 0 1 .268-.11c.104 0 .19.037.262.11a.367.367 0 0 1 .107.265c0 .102-.035.19-.107.264ZM3.5 11.77c0 .294.104.544.311.75.208.204.46.307.76.307h.758l.01 2.182c0 .276.097.51.292.703a.961.961 0 0 0 .7.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182c0 .276.097.51.292.703a.972.972 0 0 0 .71.288.973.973 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76c.291 0 .54-.103.749-.308.207-.205.311-.455.311-.75V5.365h-9v6.404Zm10.495-6.587a.983.983 0 0 0-.702.278.91.91 0 0 0-.293.685v4.063c0 .271.098.501.293.69a.97.97 0 0 0 .702.284c.28 0 .517-.095.712-.284a.924.924 0 0 0 .293-.69V6.146a.91.91 0 0 0-.293-.685.995.995 0 0 0-.712-.278Zm-12.702.283a.985.985 0 0 1 .712-.283c.273 0 .507.094.702.283a.913.913 0 0 1 .293.68v4.063a.932.932 0 0 1-.288.69.97.97 0 0 1-.707.284.986.986 0 0 1-.712-.284.924.924 0 0 1-.293-.69V6.146c0-.264.098-.491.293-.68Z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="fs-2 text-body-emphasis">Android</h3>
-                        <p>Dengan Android, akses internet cepat dan mudah di ujung jari kamu. Temukan informasi terbaru, berita, dan artikel menarik dalam hitungan detik melalui mesin pencari favoritmu, tanpa batasan!</p>
-                        <a href="#" class="btn btn-primary">
-                           PRIMARY BUTTON
-                        </a>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-tablet" viewBox="0 0 16 16">
-                            <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
-                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="fs-2 text-body-emphasis">Tablet</h3>
-                        <p>Dengan tablet, akses internet menjadi lebih besar dan lebih jelas. Jelajahi web dengan mudah melalui layar sentuh yang responsif, membawa dunia internet langsung ke pelukanmu</p>
-                        <a href="#" class="btn btn-primary">
-                            PRIMARY BUTTON
-                        </a>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
-                            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="fs-2 text-body-emphasis">Laptop</h3>
-                        <p>Nikmati pengalaman browsing web yang cepat dan lancar di laptopmu. Akses informasi, baca berita terbaru, dan jelajahi situs-situs favoritmu dengan kecepatan tinggi dan kenyamanan penuh.</p>
-                        <a href="#" class="btn btn-primary">
-                           PRIMARY BUTTON
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container px-4 py-5" id="custom-cards">
-            <h2 class="pb-2 border-bottom">Custom cards</h2>
-
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h4 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Bersama Gamer Sejati: Di Sini, Kita Menyusun Kisah-kisah Penuh Prestasi</h4>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Panggilan Gamer: Di Mana Keterampilan Bertemu Keberanian, dan Kemenangan Ada di Ujung Jari</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
-                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Eksplorasi Tanah Gamer: Di Sini, Permainan Merupakan Seni yang Tak Terbatas</h3>
-                            <ul class="d-flex list-unstyled mt-auto">
-                                <li class="me-auto">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container px-4 py-5" id="icon-grid">
-            <h2 class="pb-2 border-bottom">Icon grid</h2>
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container px-4 py-5">
-            <hr class="featurette-divider">
-            <footer class="container-fluid bg-dark text-light py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h3>Explore</h3>
-                            <ul class="list-unstyled">
-                                <li><h5><a href="index.html" class="text-light text-decoration-none">Home</a></h5></li>
-                                <li><h5><a href="academy.html" class="text-light text-decoration-none">Academy</a></h5></li>
-                                <li><h5><a href="article.html" class="text-light text-decoration-none">Article</a></h5></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Follow Us</h3>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="#" class="text-light text-decoration-none social-icon">
-                                        <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="30" height="70" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="text-light text-decoration-none social-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="text-light text-decoration-none social-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="70" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Contact Us</h3>
-                            <address>
-                                <p>Email: store@website.com</p>
-                                <p>Phone: +123-456-7890</p>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            <script src="assets/js/bootstrap.bundle.min.js"></script>
-    </main>
 </div>
-</body>
-</html>
 
+<div class="container">
+    <div class="events">
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event4.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 1</h2>
+                <p>Date: January 1, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event5.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 2</h2>
+                <p>Date: February 15, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event6.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 3</h2>
+                <p>Date: March 30, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="events">
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event7.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 1</h2>
+                <p>Date: January 1, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event8.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 2</h2>
+                <p>Date: February 15, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="opacity-100">
+                <img src="assets/photo/event9.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
+            </div>
+            <div class="event-details">
+                <h2>Event 3</h2>
+                <p>Date: March 30, 2023</p>
+                <button>
+                    More
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="container-fluid bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Explore</h3>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="academy.html" class="text-light text-decoration-none">Academy</a></li>
+                    <li><a href="article.html" class="text-light text-decoration-none">Article</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Follow Us</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light text-decoration-none social-icon">
+                            <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-light text-decoration-none social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-light text-decoration-none social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Contact Us</h3>
+                <address>
+                    <p>Email: contact@website.com</p>
+                    <p>Phone: +123-456-7890</p>
+                </address>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
