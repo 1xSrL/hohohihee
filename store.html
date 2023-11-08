@@ -17,9 +17,9 @@
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-      .nav-link {
-    font-size: 20px;
-  }
+        .nav-link {
+             font-size: 20px;
+        }
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -72,48 +72,72 @@
         .bi-whatsapp:hover {
             fill: #25D366;
         }
+        .store {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
     </style>
 </head>
 <body>
 
 <header data-bs-theme="dark">
-     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-          <a class="navbar-brand col-lg-3 me-0" href="index.html">
-            <img src="assets/photo/alvi.png" width="150" height="50"></a>
-          <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="academy.html">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="store.html">Store</a>
-            </li>
-              </ul>
-            </li>
-          </ul>
-          <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-            <a href="login.html">
-            <button class="btn btn-warning">Login/Registration</button>
-        </a>
-          </div>
+            <a class="navbar-brand col-lg-4 me-0" href="index.html">
+                <div class="box">
+                    <div class="face one">
+                        <img src="assets/photo/alvi.png" class="logo1">
+                    </div>
+                    <div class="face two">
+                        <img src="https://i.ibb.co/SNz0hNq/instagram.png" class="logo3">
+                    </div>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarsExample11">
+                <ul class="navbar-nav col-lg-6 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academy.html">EVENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="store.html">STORE</a>
+                    </li>
+                </ul>
+
+                <div class="d-lg-flex col-lg-6 justify-content-end">
+                    <a href="login.html">
+                        <button class="btn btn-warning">Login/Registration</button>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
 </header>
 
-       <div class="tag" style="margin-top: 10px;"> <!-- Ganti 20px sesuai dengan ukuran margin yang Anda inginkan -->
-    <p style="font-size: 25px; font-weight: bold">Tag</p>
-</div>
+        <div class="store">
+        <h2>KALKUN STORE</h2>
+        <h2>KALKUN STORE</h2>
+    </div>
 
-        <div class="d-flex gap-2 justify-content-start py-5">
+
+
+
+       <div class="tag" style="margin-top: 0; padding-top: 0px; margin-left: 15px;">
+        <p style="font-size: 30px; font-weight: bold">Tag</p>
+        </div>
+
+
+        <div class="d-flex gap-2 justify-content-start" style="margin-left: 10px;">
 
             <button type="button" class="btn btn-outline-warning">Genre Game</button>
             <button type="button" class="btn btn-outline-warning">Free</button>
@@ -128,13 +152,13 @@
         </div>
 
         <div class="d-flex justify-content">
-            <p style="font-size: 30px; font-weight: bold">Search Game</p>
+            <p style="margin-left: 10px; font-size: 30px; font-weight: bold">Search Game</p>
         </div>
         <form class="d-flex" role="search">
             <div class="d-flex justify-content-center">
             </div>
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 1200px">
-            <button type="button" class="btn btn-outline-warning">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 1800px">
+            <button type="button" class="btn btn-warning" style="width: 150px">Search</button>
         </form>
 <p></p>
 
