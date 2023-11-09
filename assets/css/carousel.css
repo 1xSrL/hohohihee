@@ -202,18 +202,18 @@ button {
   position: relative;
   width: 7.2em;
   height: 2em;
-  transition: 0.5s;
   font-size: 17px;
   border-radius: 0.4em;
+  text-align: center; /* Center the text horizontally */
 }
 
 button p {
   position: absolute;
-  top: 0.4em;
-  left: 1.2em;
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Center the text using transform */
   margin: 0;
   padding: 0;
-  transition: .5s;
   color: #0077b5;
 }
 
@@ -224,23 +224,11 @@ button svg {
   margin: 0;
   padding: 0;
   opacity: 0;
-  transition: 0.5s;
   height: 1em;
-  fill: #fff
+  fill: #fff;
 }
 
-button:hover p {
-  left: 0.6em;
-  color: #fff
-}
 
-button:hover svg {
-  opacity: 1;
-}
-
-button:hover {
-  background-color: #0077b5;
-}
 .form {
   background-color: #fff;
   display: block;
@@ -454,8 +442,8 @@ button:hover {
   cursor: pointer;
 }
 .img-border {
-  overflow: hidden; /* Hide overflow content */
-  position: relative; /* Positioning context for the shadow */
+  overflow: hidden;
+  position: relative;
 }
 
 .img-border::before {
@@ -469,7 +457,7 @@ button:hover {
 }
 .Btn {
   width: 140px;
-  height: 35px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -530,8 +518,3 @@ button:hover {
   transform: scale(1.15);
   transform-origin: top;
 }
-
-
-
-
-

@@ -2,6 +2,15 @@
 <html lang="en" data-bs-theme="dark" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <script>
+        // Function to handle the like button click
+        function handleLikeButtonClick(likeCountId) {
+            const likeCountElement = document.getElementById(likeCountId);
+            let currentLikeCount = parseInt(likeCountElement.textContent);
+            currentLikeCount++;
+            likeCountElement.textContent = currentLikeCount;
+        }
+    </script>
+    <script>
         function playVideo() {
             const video = document.querySelector("video");
             if (video) {
@@ -88,14 +97,6 @@
         .carousel-caption{
             color: white;
         }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
         @media (min-width: 768px) {
         }
         {
@@ -276,6 +277,9 @@
 
 <main>
 
+
+
+
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -310,20 +314,36 @@
                     <h4 class="fst-italic">CO-OPERATIVE</h4>
                     <p class="mb-0">Looking for Excitement and Teamwork? Discover the Thrill of Co-operative Games!</p>
                     <div class="text-center mt-3">
-                        <button class="Btn">
+                        <button class="Btn like-button" data-likecount="likeCount1">
                         <span class="leftContainer">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
                                 <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
                             </svg>
                             <span class="like">Like</span>
                         </span>
-                            <span class="likeCount">2,050</span>
+                            <span class="likeCount" id="likeCount1">0</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Add a single event listener to handle all "Like" buttons
+        const likeButtons = document.querySelectorAll(".like-button");
+        likeButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const likeCountId = button.getAttribute("data-likecount");
+                const likeCountElement = document.getElementById(likeCountId);
+                let currentLikeCount = parseInt(likeCountElement.textContent);
+                currentLikeCount++;
+                likeCountElement.textContent = currentLikeCount;
+            });
+        });
+    </script>
+
+
 
 
     <div class="row">
@@ -333,20 +353,20 @@
                     <h4 class="fst-italic">ADVENTURE</h4>
                     <p class="mb-0">Embark on an epic journey into the unknown with our thrilling adventure game!</p>
                     <div class="text-center mt-3">
-                        <button class="Btn">
-                        <span class="leftContainer">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
-                                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
-                            </svg>
-                            <span class="like">Like</span>
-                        </span>
-                            <span class="likeCount">2,050</span>
+                        <button class="Btn like-button" onclick="handleLikeButtonClick('likeCount1')">
+        <span class="leftContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
+            </svg>
+            <span class="like">Like</span>
+        </span>
+                            <span class="likeCount" id="likeCount1">0</span>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+     <div class="col-md-5">
             <div class="text-center">
                 <img src="assets/photo/about2.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
             </div>
@@ -374,7 +394,7 @@
                             </svg>
                             <span class="like">Like</span>
                         </span>
-                            <span class="likeCount">2,050</span>
+                            <span class="likeCount">0</span>
                         </button>
                     </div>
                 </div>
@@ -387,7 +407,7 @@
             <div class="position-sticky" style="top: 2rem;">
                 <div class="p-4 mb-3 bg-body-tertiary rounded">
                     <h4 class="fst-italic">SPORTS</h4>
-                    <p class="mb-0">experience the thrill of sports like never before. challenge your skills, and become a champion!</p>
+                    <p class="mb-0">experience the thrill of sports like never before. and become a champion!</p>
                     <div class="text-center mt-3">
                         <button class="Btn">
                         <span class="leftContainer">
@@ -396,7 +416,7 @@
                             </svg>
                             <span class="like">Like</span>
                         </span>
-                            <span class="likeCount">2,050</span>
+                            <span class="likeCount">0</span>
                         </button>
                     </div>
                 </div>
@@ -426,7 +446,7 @@
                         <div class="mb-1 text-body-secondary">Nov 8</div>
                         <p class="mb-auto">Be the last to brake in EA SPORTS™ F1® 23</p>
                         <button>
-                            <p>Follow me</p>
+                            <p>Follow</p>
                         </button>
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -445,7 +465,7 @@
                         <div class="mb-1 text-body-secondary">Nov 11</div>
                         <p class="mb-auto">Enter the adrenaline-filled world of revolution.</p>
                         <button>
-                            <p>Follow me</p>
+                            <p>Follow</p>
                         </button>
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -469,7 +489,7 @@
                         <div class="mb-1 text-body-secondary">Nov 11</div>
                         <p class="mb-auto">How long can you survive a post apocalyptic world?</p>
                         <button>
-                            <p>Follow me</p>
+                            <p>Follow</p>
                         </button>
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -488,7 +508,7 @@
                         <div class="mb-1 text-body-secondary">Nov 11</div>
                         <p class="mb-auto">Gods. Romance. Murder. Musical Numbers?!</p>
                         <button>
-                            <p>Follow me</p>
+                            <p>Follow</p>
                         </button>
                     </div>
                     <div class="col-auto d-none d-lg-block">
