@@ -326,7 +326,7 @@ button svg {
   justify-content: center;
   padding: 25px 25px;
   gap: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.055);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 
 
@@ -441,6 +441,7 @@ button svg {
 .name:hover {
   cursor: pointer;
 }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 .img-border {
   overflow: hidden;
@@ -525,6 +526,8 @@ button svg {
 
 
 =======
+=======
+>>>>>>> Stashed changes
 
 .wrapper {
   display: inline-flex;
@@ -834,4 +837,6 @@ input:-webkit-autofill:active {
   -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
   -webkit-transition-delay: 9999s;
 }
->>>>>>> ACADEMY
+.text-black {
+  color: black;
+}
