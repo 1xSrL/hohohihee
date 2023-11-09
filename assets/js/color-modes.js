@@ -12,6 +12,17 @@
 
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
+  // Add an event listener to the like button
+  document.getElementById("likeButton").addEventListener("click", function () {
+    // Get the current like count
+    let likeCount = parseInt(document.getElementById("likeCount").innerText);
+    // Increment the like count
+    likeCount++;
+    // Update the displayed like count
+    document.getElementById("likeCount").innerText = likeCount;
+  });
+
+
 
   const setTheme = theme => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {

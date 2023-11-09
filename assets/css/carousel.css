@@ -202,18 +202,18 @@ button {
   position: relative;
   width: 7.2em;
   height: 2em;
-  transition: 0.5s;
   font-size: 17px;
   border-radius: 0.4em;
+  text-align: center; /* Center the text horizontally */
 }
 
 button p {
   position: absolute;
-  top: 0.4em;
-  left: 1.2em;
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Center the text using transform */
   margin: 0;
   padding: 0;
-  transition: .5s;
   color: #0077b5;
 }
 
@@ -224,23 +224,11 @@ button svg {
   margin: 0;
   padding: 0;
   opacity: 0;
-  transition: 0.5s;
   height: 1em;
-  fill: #fff
+  fill: #fff;
 }
 
-button:hover p {
-  left: 0.6em;
-  color: #fff
-}
 
-button:hover svg {
-  opacity: 1;
-}
-
-button:hover {
-  background-color: #0077b5;
-}
 .form {
   background-color: #fff;
   display: block;
@@ -453,6 +441,93 @@ button:hover {
 .name:hover {
   cursor: pointer;
 }
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+.img-border {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-border::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 2) 0%, transparent 100%);
+  z-index: 1;
+}
+.Btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.leftContainer {
+  width: 60%;
+  height: 100%;
+  background-color: #0060ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.leftContainer .like {
+  color: white;
+  font-weight: 600;
+}
+
+.likeCount {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0060ff;
+  font-weight: 600;
+  position: relative;
+  background-color: white;
+}
+
+.likeCount::before {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+.Btn:hover .leftContainer {
+  background-color: #1d4292;
+}
+
+.Btn:active .leftContainer {
+  background-color: #072b7a;
+}
+
+.Btn:active .leftContainer svg {
+  transform: scale(1.15);
+  transform-origin: top;
+}
+
+
+
+
+
+=======
+=======
+>>>>>>> Stashed changes
 
 .wrapper {
   display: inline-flex;
@@ -761,4 +836,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
   -webkit-transition-delay: 9999s;
+}
+.text-black {
+  color: black;
 }

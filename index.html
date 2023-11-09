@@ -1,6 +1,30 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto" xmlns="http://www.w3.org/1999/html">
+<html lang="en" data-bs-theme="dark" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
+    <script>
+        // Function to handle the like button click
+        function handleLikeButtonClick(likeCountId) {
+            const likeCountElement = document.getElementById(likeCountId);
+            let currentLikeCount = parseInt(likeCountElement.textContent);
+            currentLikeCount++;
+            likeCountElement.textContent = currentLikeCount;
+        }
+    </script>
+    <script>
+        function playVideo() {
+            const video = document.querySelector("video");
+            if (video) {
+                video.play();
+            }
+        }
+
+        function pauseVideo() {
+            let video = document.querySelector("video");
+            if (video) {
+                video.pause();
+            }
+        }
+    </script>
     <script src="assets/js/color-modes.js">
         <script src="assets/css/bootstrap.mon.css">
     </script>
@@ -16,21 +40,18 @@
                 followButton.textContent = "Following";
             }
             following = !following;
-
-            // Check if "Follow" button was clicked and perform grayscale effect
             if (!following) {
                 grayscaleContent();
             }
         }
 
         function grayscaleContent() {
-            // Check if the grayscaleCount is less than 5 and apply grayscale effect
             if (grayscaleCount < 5) {
                 const content = document.getElementById("content");
                 content.classList.add("grayscale-effect");
                 grayscaleCount++;
             } else {
-                grayscaleCount = 0; // Reset the count after 5 grayscale toggles
+                grayscaleCount = 0;
                 const content = document.getElementById("content");
                 content.classList.remove("grayscale-effect");
             }
@@ -44,26 +65,18 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title> · Bootstrap v5.3</title>
+    <title>HOME</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        .form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #ccc;
-        }
-        .input-container {
-            margin-bottom: 15px;
+        #myCarousel {
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 20);
         }
         .container {
             max-width: 1200px;
@@ -84,20 +97,8 @@
         .carousel-caption{
             color: white;
         }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
         @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
         }
-
         {
             width: 100%;
             height: 3rem;
@@ -151,6 +152,39 @@
         }
         .carousel-inner img {
             filter: blur(3px);
+        }
+        .custom-play-pause-buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button,
+        .pause-button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            margin: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button::after {
+            content: "\25B6";
+            font-size: 24px;
+            color: black;
+        }
+
+        .pause-button::after {
+            content: "\II";
+            font-size: 24px;
+            color: black;
         }
     </style>
     <link href="assets/css/carousel.css" rel="stylesheet">
@@ -226,7 +260,14 @@
                             <a class="nav-link" href="academy.html">ACADEMY</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="article.html">STORE</a>
+                            <a class="nav-link" href="store.html">STORE</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <form class="d-flex" role="search">
+                                <a href="login.html" class="btn btn-warning">Login</a>
+                            </form>
                         </li>
                     </ul>
                 </div>
@@ -236,15 +277,16 @@
 
 <main>
 
+
+
+
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/photo/headline1.jpg" class="d-block w-100" alt="First slide">
+                <video class="d-block w-100" controls>
+                    <source src="assets/video/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>Find More</h1>
@@ -252,85 +294,34 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="assets/photo/headline2.jpg" class="d-block w-100" alt="Your Image">
-                <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>Level Up Your Collection</h1>
-                        <p><a class="btn btn-lg btn-primary" href="#">Play Now</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/photo/headline3.jpg" class="d-block w-100" alt="Your Image">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Discover More</h1>
-                        <p><a class="btn btn-lg btn-primary" href="article.html">Browse Collections</a></p>
-                    </div>
-                </div>
+        <div class="custom-play-pause-buttons">
+            <button class="play-button" onclick="playVideo()"></button>
+            <button class="pause-button" onclick="pauseVideo()"></button>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
+</main>
 
-    <hr class="featurette-divider">
-
-
-    <form class="form">
-        <p class="form-title">Sign in to your account</p>
-        <div class="input-container">
-            <input placeholder="Enter email" type="email">
-            <span>
-            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-          </span>
-        </div>
-        <div class="input-container">
-            <input placeholder="Enter password" type="password">
-
-            <span>
-            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-              <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-          </span>
-        </div>
-        <button class="submit" type="submit">
-            Sign in
-        </button>
-
-        <p class="signup-link">
-            No account?
-            <a href="">Sign up</a>
-        </p>
-    </form>
-
-
-    <hr class="featurette-divider">
-
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-md-5">
             <div class="text-center">
-                <img src="assets/photo/about1.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="500" height="500">
+                <img src="assets/photo/about1.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
             </div>
         </div>
         <div class="col-md-4">
             <div class="position-sticky" style="top: 2rem;">
                 <div class="p-4 mb-3 bg-body-tertiary rounded">
                     <h4 class="fst-italic">CO-OPERATIVE</h4>
-                    <p class="mb-0">Looking for Excitement and Teamwork? Discover the Thrill of Co-operative Games! </p>
+                    <p class="mb-0">Looking for Excitement and Teamwork? Discover the Thrill of Co-operative Games!</p>
                     <div class="text-center mt-3">
-                        <button id="likeButton" class="btn btn-primary common-button">
-                            <span id="likeCount">0</span> Likes
+                        <button class="Btn like-button" data-likecount="likeCount1">
+                        <span class="leftContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+                                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
+                            </svg>
+                            <span class="like">Like</span>
+                        </span>
+                            <span class="likeCount" id="likeCount1">0</span>
                         </button>
                     </div>
                 </div>
@@ -338,7 +329,106 @@
         </div>
     </div>
 
-</main>
+    <script>
+        // Add a single event listener to handle all "Like" buttons
+        const likeButtons = document.querySelectorAll(".like-button");
+        likeButtons.forEach((button) => {
+            button.addEventListener("click", function () {
+                const likeCountId = button.getAttribute("data-likecount");
+                const likeCountElement = document.getElementById(likeCountId);
+                let currentLikeCount = parseInt(likeCountElement.textContent);
+                currentLikeCount++;
+                likeCountElement.textContent = currentLikeCount;
+            });
+        });
+    </script>
+
+
+
+
+    <div class="row">
+        <div class="col-md-3 offset-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">ADVENTURE</h4>
+                    <p class="mb-0">Embark on an epic journey into the unknown with our thrilling adventure game!</p>
+                    <div class="text-center mt-3">
+                        <button class="Btn like-button" onclick="handleLikeButtonClick('likeCount1')">
+        <span class="leftContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
+            </svg>
+            <span class="like">Like</span>
+        </span>
+                            <span class="likeCount" id="likeCount1">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <div class="col-md-5">
+            <div class="text-center">
+                <img src="assets/photo/about2.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5"></div>
+
+    <div class="row mb-5">
+        <div class="col-md-5">
+            <div class="text-center">
+                <img src="assets/photo/about3.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">STRATEGY</h4>
+                    <p class="mb-0">Command your armies, forge alliances, and outwit your opponents in the ultimate test of strategic prowess!</p>
+                    <div class="text-center mt-3">
+                        <button class="Btn">
+                        <span class="leftContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+                                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
+                            </svg>
+                            <span class="like">Like</span>
+                        </span>
+                            <span class="likeCount">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 offset-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">SPORTS</h4>
+                    <p class="mb-0">experience the thrill of sports like never before. and become a champion!</p>
+                    <div class="text-center mt-3">
+                        <button class="Btn">
+                        <span class="leftContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
+                                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
+                            </svg>
+                            <span class="like">Like</span>
+                        </span>
+                            <span class="likeCount">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="text-center">
+                <img src="assets/photo/about4.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -346,56 +436,90 @@
 
 
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-3 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-                    <h3 class="mb-0">Post title</h3>
-                    <div class="mb-1 text-body-secondary">Nov 11</div>
-                    <p class="mb-auto">This is a wider card with supporting text below.</p>
-                    <button>
-                        <p>Follow me</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"/>
-                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-3 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">F1® 23</strong>
+                        <h3 class="mb-0">NEWEST</h3>
+                        <div class="mb-1 text-body-secondary">Nov 8</div>
+                        <p class="mb-auto">Be the last to brake in EA SPORTS™ F1® 23</p>
+                        <button>
+                            <p>Follow</p>
+                        </button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="img-border">
+                            <img src="assets/photo/card1.jpg" width="400" height="270" alt="Thumbnail" />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-6">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-3 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-success-emphasis">New Category</strong>
-                    <h3 class="mb-0">New Post Title</h3>
-                    <div class="mb-1 text-body-secondary">Nov 12</div>
-                    <p class="mb-auto">This is another wider card with supporting text below.</p>
-                    <button>
-                        <p>Follow me</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c"/>
-                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-3 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">Far Cry 6</strong>
+                        <h3 class="mb-0">SEQUEL</h3>
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+                        <p class="mb-auto">Enter the adrenaline-filled world of revolution.</p>
+                        <button>
+                            <p>Follow</p>
+                        </button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="img-border">
+                            <img src="assets/photo/card2.jpg" width="400" height="270" alt="Thumbnail" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-3 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">DayZ</strong>
+                        <h3 class="mb-0">POPULAR</h3>
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+                        <p class="mb-auto">How long can you survive a post apocalyptic world?</p>
+                        <button>
+                            <p>Follow</p>
+                        </button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="img-border">
+                            <img src="assets/photo/card3.jpg" width="400" height="270" alt="Thumbnail" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-3 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">Stray Gods</strong>
+                        <h3 class="mb-0">INDIE</h3>
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+                        <p class="mb-auto">Gods. Romance. Murder. Musical Numbers?!</p>
+                        <button>
+                            <p>Follow</p>
+                        </button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="img-border">
+                            <img src="assets/photo/card4.jpg" width="400" height="270" alt="Thumbnail" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <hr class="featurette-divider">
@@ -461,20 +585,6 @@
         });
     </script>
 
-    <script>
-        let following = false;
-
-        function toggleFollow() {
-            const followButton = document.getElementById("followButton");
-            if (following) {
-                followButton.textContent = "Follow";
-            } else {
-                followButton.textContent = "Following";
-            }
-            following = !following;
-        }
-
-    </script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
