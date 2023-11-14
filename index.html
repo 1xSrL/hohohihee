@@ -2,7 +2,6 @@
 <html lang="en" data-bs-theme="dark">
 <head>
     <script>
-        // Function to handle the like button click
         function handleLikeButtonClick(likeCountId) {
             const likeCountElement = document.getElementById(likeCountId);
             let currentLikeCount = parseInt(likeCountElement.textContent);
@@ -72,6 +71,13 @@
     <link href="assets/css/promo.css" rel="stylesheet">
 
     <style>
+        .store {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+        }
         #myCarousel {
             box-shadow: 0 15px 15px rgba(0, 0, 0, 20);
         }
@@ -191,6 +197,9 @@
             text-align: center;
             font-family: Arial, sans-serif;
         }
+        main {
+            margin-top: 20px;
+        }
     </style>
     <link href="assets/css/carousel.css" rel="stylesheet">
 </head>
@@ -247,34 +256,40 @@
     </ul>
 </div>
 
-
-    <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+    <header data-bs-theme="dark" style="margin-bottom: 20px;">
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">H0H0H1H3</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+                <a class="navbar-brand col-lg-3 me-5" href="index.html">
+                    <div class="store">
+                        <h2>KALKUN STORE</h2>
+                        <h2>KALKUN STORE</h2>
+                    </div>
+                </a>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarsExample11">
+                    <ul class="navbar-nav col-lg-6 justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                            <a class="nav-link" aria-current="page" href="index.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="academy.html">ACADEMY</a>
+                            <a class="nav-link" href="academy.html">EVENT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="store.html">STORE</a>
+                            <a class="nav-link active" href="store.html">STORE</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <form class="d-flex" role="search">
-                                <a href="signup.html" class="btn btn-warning">Login</a>
-                            </form>
-                        </li>
-                    </ul>
+
+                    <div class="d-lg-flex col-lg-5 justify-content-end">
+                        <a href="signup.html">
+                            <button class="btn btn-warning">Sign up</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -318,6 +333,16 @@
             <a href="#" class="btn">Shop Now</a>
         </div>
     </div>
+        <div class="styled-element">
+            <div class="promotion-image">
+                <img src="assets/photo/promo1.jpg" alt="Promotion Image">
+            </div>
+            <div class="promotion-text">
+                <h2>Your Promotion Title</h2>
+                <p>Your promotion description goes here.</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
 
 
 
@@ -587,6 +612,7 @@
         </div>
     </footer>
 </main>
+</div>
 </div>
 </body>
 </html>
