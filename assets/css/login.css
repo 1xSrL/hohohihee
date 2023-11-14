@@ -12,12 +12,12 @@ body {
     overflow: hidden;
     border-radius: 16px;
     color: #010101;
-    text-align: center; /* Center the text within the form-box */
+    text-align: center;
 }
 
 .form {
     padding: 32px 24px 24px;
-    box-sizing: border-box; /* Include padding in the width */
+    box-sizing: border-box;
 }
 
 .title {
@@ -37,8 +37,8 @@ body {
 .input {
     width: 100%;
     padding: 8px 15px;
-    margin: 5px 0; /* Add some margin between inputs */
-    box-sizing: border-box; /* Include padding in the width */
+    margin: 5px 0;
+    box-sizing: border-box;
 }
 
 .form-section {
@@ -46,7 +46,7 @@ body {
     font-size: .85rem;
     background-color: #e0ecfb;
     box-shadow: rgb(0 0 0 / 8%) 0 -1px;
-    margin-top: 10px; /* Add some space between the form and the section */
+    margin-top: 10px;
 }
 
 .form-section a {
@@ -65,7 +65,7 @@ body {
     color: white;
     border: 0;
     border-radius: 24px;
-    padding: 10px 16px;
+    padding: 10px 25px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -76,3 +76,4 @@ body {
 .form button:hover {
     background-color: #005ce6;
 }
+
