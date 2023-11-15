@@ -840,3 +840,37 @@ input:-webkit-autofill:active {
 .text-black {
   color: black;
 }
+.container-fluid {
+  margin-top: 15px;
+}
+.nav-item {
+  margin-right: 30px;
+}
+.store h2
+{
+  position: absolute;
+  color: orange;
+  transition: translate(-50%,-50%);
+  font-size: 35px;
+}
+.store h2:nth-child(1)
+{
+  color: transparent;
+  -webkit-text-stroke: 1px #ffc107;
+}
+.store h2:nth-child(2)
+{
+  color: #ffc107;
+  animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+    clip-path: polygon(0 45%, 20% 44%, 35% 46%, 51% 56%, 70% 59%, 88% 57%, 100% 50%, 100% 100%, 0 100%);
+  }
+  50%
+  {
+    clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
+  }
+}
