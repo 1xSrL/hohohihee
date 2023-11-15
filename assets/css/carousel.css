@@ -620,7 +620,7 @@ button svg {
   --input-text-color: #fff;
   --input-bg-color: #283542;
   --focus-input-bg-color: transparent;
-  --text-color: #949faa;
+  --text-color: #006ed3;
   --active-color: #1b9bee;
   --width-of-input: 200px;
   --inline-padding-of-input: 1.2em;
@@ -731,7 +731,7 @@ input:-webkit-autofill:active {
   --input-text-color: #fff;
   --input-bg-color: #283542;
   --focus-input-bg-color: transparent;
-  --text-color: #949faa;
+  --text-color: #0573a8;
   --active-color: #1b9bee;
   --width-of-input: 200px;
   --inline-padding-of-input: 1.2em;
@@ -873,4 +873,9 @@ input:-webkit-autofill:active {
   {
     clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
   }
+}
+
+header[data-bs-theme="dark"] nav {
+  background-color: #CCCCCC;
+  color: #000000;
 }
