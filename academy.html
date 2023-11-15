@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Bootstrap Example</title>
+    <title>EVENT</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -125,33 +125,52 @@
             width: 100%;
             filter: drop-shadow(0 0 23px var(--animation-color))
         }
+        .btn-sm-custom {
+            padding: 0.10rem 0.10rem;
+            font-size: 0.75rem;
+        }
+        .store {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
 <header data-bs-theme="dark">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">H0H0H1H3</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+            <a class="navbar-brand col-lg-3 me-5" href="index.html">
+                <div class="store">
+                    <h2>KALKUN STORE</h2>
+                    <h2>KALKUN STORE</h2>
+                </div>
+            </a>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarsExample11">
+                <ul class="navbar-nav col-lg-6 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="academy.html">EVENT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="store.html">STORE</a>
+                        <a class="nav-link active" href="store.html">STORE</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-                    </li>
-                </ul>
+
+                <div class="d-lg-flex col-lg-5 justify-content-end">
+                    <a href="login.html">
+                        <button class="btn btn-warning">Login</button>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -161,7 +180,6 @@
     <p></p>
     <p></p>
     <p></p>
-    <span class="text-danger ml-2"<span class="text-red">KALKUN</span> <span class="text-white">EVENT</span>
 </h1>
 <p></p>
 <p></p>
@@ -216,30 +234,48 @@
 <i class="fa-solid fa-magnifying-glass text-igdx-dark-blue"></i>
 <div class="container">
     <div class="events">
-        <<div class="event-card">
+        <div class="event-card position-relative">
+            <div class="new-badge position-absolute top-0 start-0">
+                <span class="badge bg-danger">New</span>
+            </div>
         <div class="opacity-100">
             <img src="assets/photo/event1.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
         </div>
         <div class="event-details">
             <h4 class="fst-italic">Total War: WARHAMMER III</h4>
-            <h9>The cataclysmic conclusion to the Total War: WARHAMMER trilogy is here. Rally your forces and step into the Realm of Chaos,good </h9>
-            <p><b>Date:</b> <b>January 1, 2023</b></p>
-            <button class="text-black">More</button>
+            <h9>The cataclysmic conclusion to the Total War: WARHAMMER trilogy is here. Rally your forces and step into the Realm of Chaosa dimension of mind-bending </h9>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                </div>
+            </div>
         </div>
     </div>
 
 
-        <div class="event-card">
+        <div class="event-card position-relative">
+            <div class="new-badge position-absolute top-0 start-0">
+                <span class="badge bg-danger">New</span>
+            </div>
             <div class="opacity-100">
                 <img src="assets/photo/event2.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">Yu-Gi-Oh! Master Duel</h4>
-                <h9>Yu-Gi-Oh! MASTER DUEL is the ultimate free-to-play cross-platform strategy card game with fast-paced Duels, stunning HD graphics and a new, dynamic soundtrack!</h9>
-                <p><b>Date: February 15, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Yu-Gi-Oh! MASTER DUEL is the ultimate free-to-play cross-platform strategy card game with fast-paced Duels, stunning HD</h9>
+                <p></p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <div class="event-card">
             <div class="opacity-100">
@@ -248,8 +284,13 @@
             <div class="event-details">
                 <h4 class="fst-italic">Dead by Daylight</h4>
                 <h9>Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape.</h9>
-                <p><b>Date: March 30, 2023</b></p>
-                <button class="text-black">More</button>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -263,33 +304,54 @@
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">Sons Of The Forest</h4>
-                <h9>Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator.</h9>
-                <p><b>Date: January 1, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator new open-world.</h9>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="event-card">
+        <div class="event-card position-relative">
+            <div class="new-badge position-absolute top-0 start-0">
+                <span class="badge bg-danger">New</span>
+            </div>
             <div class="opacity-100">
                 <img src="assets/photo/event5.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">Project Zomboid</h4>
-                <h9>Project Zomboid is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial.</h9>
-                <p><b>Date: February 15, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Project Zomboid is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial raccoon await the unwar.</h9>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="event-card">
+        <div class="event-card position-relative">
+            <div class="new-badge position-absolute top-0 start-0">
+                <span class="badge bg-danger">New</span>
+            </div>
             <div class="opacity-100">
                 <img src="assets/photo/event6.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">For The King II</h4>
-                <h9>Battle against Fahrul's tyrannical Queen alone or as a party of four players in the sequel to For The King, the massively popular turn-based roguelite tabletop RPG. Will you unravel the once beloved Queen's terrible.</h9>
-                <p><b>Date: March 30, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Battle against Fahrul's tyrannical Queen alone or as a party of four players in the sequel to For The King, the massively popular turn-based roguelite tabletop RPG. Will you unravel the once beloved Queen's terrible to For The Kingpopular turn-based.</h9>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -297,15 +359,23 @@
 
 <div class="container">
     <div class="events">
-        <div class="event-card">
+        <div class="event-card position-relative">
+            <div class="new-badge position-absolute top-0 start-0">
+                <span class="badge bg-danger">New</span>
+            </div>
             <div class="opacity-100">
                 <img src="assets/photo/event7.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">Cities: Skylines II</h4>
-                <h9>Raise a city from the ground up and transform it into a thriving metropolis with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you've never experienced. With deep</h9>
-                <p><b>Date: January 1, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Raise a city from the ground up and transform it into a thriving metropolis with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you've never experienced. With deep simulation and a living economy</h9>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -315,25 +385,49 @@
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">Dota 2</h4>
-                <h9>Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a</h9>
-                <p><b>Date: February 15, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay</h9>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="event-card">
+        <div class="event-card position-relative">
+            <div class="new-badge position-absolute top-0 start-0">
+                <span class="badge bg-danger">New</span>
+            </div>
             <div class="opacity-100">
                 <img src="assets/photo/event9.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
             </div>
             <div class="event-details">
                 <h4 class="fst-italic">Hearts of Iron IV</h4>
-                <h9>Victory is at your fingertips! Your ability to lead your nation is your supreme weapon, the strategy game Hearts of Iron IV lets you take command of any nation in World War II; the most engaging conflict in world history.</h9>
-                <p><b>Date: March 30, 2023</b></p>
-                <button class="text-black">More</button>
+                <h9>Victory is at your fingertips! Your ability to lead your nation is your supreme weapon, the strategy game Hearts of Iron IV lets you take command of any nation in World War II; the most engaging conflict in world history.nation is your supreme weapon</h9>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
 <footer class="container-fluid bg-dark text-light py-5">
     <div class="container">
         <div class="row">
@@ -381,8 +475,6 @@
 
     <div class="closing-section">
         <div class="container">
-            <h2>Terima Kasih Telah Mengunjungi Website Kami!</h2>
-            <p>Temukan pengalaman luar biasa dengan produk dan layanan terbaik kami.</p>
         </div>
     </div>
 </footer>
