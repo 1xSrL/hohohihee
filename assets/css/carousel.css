@@ -116,9 +116,6 @@ footer a {
 footer a:hover {
   color: #e0e0e0;
 }
-.carousel-inner img {
-  filter: blur(3px);
-}
 .follow-button {
   background-color: #007BFF;
   color: #fff;
@@ -220,22 +217,16 @@ button svg {
   background-color: #d62976;
   transition-duration: .3s;
 }
-/* twitter*/
+
 .containerTwo:hover {
   background-color: #00acee;
   transition-duration: .3s;
 }
-/* linkdin*/
+
 .containerThree:hover {
   background-color: #0072b1;
   transition-duration: .3s;
 }
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: #128C7E;
-  transition-duration: .3s;
-}
-
 .socialContainer:active {
   transform: scale(0.9);
   transition-duration: .3s;
@@ -253,17 +244,6 @@ button svg {
   animation: slide-in-top 0.3s both;
 }
 
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .card {
   width: 190px;
   background: white;
