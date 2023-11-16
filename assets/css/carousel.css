@@ -1,7 +1,4 @@
-body, .carousel {
-  margin: 0;
-  padding: 0;
-}
+
 .carousel {
   height: 100vh;
 }
@@ -19,23 +16,16 @@ body, .carousel {
 .carousel-item {
   height: 32rem;
 }
-
-
-
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-/* rtl:begin:ignore */
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
 .featurette-divider {
   margin: 5rem 0;
-}
-.featurette-heading {
-  letter-spacing: -.05rem;
 }
 @media (min-width: 40em) {
   .carousel-caption p {
@@ -80,11 +70,6 @@ body, .carousel {
 
 .bi-instagram {
   margin-right: 10px;
-}
-footer {
-  padding: 30px 0;
-  background-color: #121212;
-  color: #fff;
 }
 
 ul.list-unstyled {
@@ -153,33 +138,10 @@ footer a:hover {
   margin-left: 10px;
 }
 .featurette-image-svg:hover {
-// Add your hover styles here
-// For example:
+
 transform: scale(1.1);
   transition: transform 0.3s;
 }
-button {
-  background-color: #fff;
-  border: 1px solid #0077b5;
-  padding: 5px;
-  position: relative;
-  width: 7.2em;
-  height: 2em;
-  font-size: 17px;
-  border-radius: 0.4em;
-  text-align: center;
-}
-
-button p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  color: #0077b5;
-}
-
 button svg {
   position: absolute;
   top: 0.45em;
@@ -364,3 +326,4 @@ button svg {
   transform: scale(1.15);
   transform-origin: top;
 }
+
