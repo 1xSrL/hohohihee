@@ -83,3 +83,71 @@
 .breadcrumb-custom .breadcrumb-item:last-child::after {
   display: none;
 }
+     .nav-link {
+             font-size: 20px;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100px;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+        .col-lg-4 {
+            overflow: hidden;
+        }
+
+        .col-lg-4 a svg:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .bi-twitter:hover {
+            fill: #1DA1F2;
+        }
+
+        .bi-instagram:hover {
+            fill: #E1306C;
+        }
+
+
+        .bi-whatsapp:hover {
+            fill: #25D366;
+        }
+        .store {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    
+        height: 100px;
+    }
+    .btn-group button {
+            margin-right: 10px; /* Sesuaikan dengan jumlah jarak yang Anda inginkan */
+        }
+.form-control {
+            margin-right: 10px; /* Sesuaikan dengan jumlah margin yang Anda inginkan */
+        }
