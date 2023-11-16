@@ -879,3 +879,12 @@ header[data-bs-theme="dark"] nav {
   background-color: #CCCCCC;
   color: #000000;
 }
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+.event-details h4.fst-italic {
+  text-decoration: underline;
+}
+.event-card .event-details h4.fst-italic:hover {
+  color: #0a58ca;
+}
