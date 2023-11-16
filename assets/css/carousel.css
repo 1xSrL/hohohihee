@@ -1,7 +1,4 @@
 
-.carousel {
-  height: 100vh;
-}
 .nav-scroller {
   width: 100%;
   height: 3rem;
@@ -9,9 +6,6 @@
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-.carousel {
-  margin-bottom: 4rem;
 }
 .carousel-item {
   height: 32rem;
@@ -326,4 +320,29 @@ button svg {
   transform: scale(1.15);
   transform-origin: top;
 }
+#myCarousel {
+  max-width: 600px; /* Set your desired maximum width */
+  margin: auto; /* Center the carousel */
+}
+
+.carousel-inner {
+  max-width: 100%; /* Ensure the carousel inner takes the full width */
+}
+
+video {
+  width: 100%; /* Make the video fill the width of its container */
+  max-width: 100%; /* Ensure the video does not exceed its container's width */
+}
+
+.container {
+  max-width: 600px; /* Set your desired maximum width for the text container */
+  margin: auto; /* Center the text container */
+}
+
+.custom-play-pause-buttons {
+  max-width: 600px; /* Set your desired maximum width for the button container */
+  margin: auto; /* Center the button container */
+}
+
+/* Add more styles as needed */
 
