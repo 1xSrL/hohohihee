@@ -1,10 +1,4 @@
-body, .carousel {
-  margin: 0;
-  padding: 0;
-}
-.carousel {
-  height: 100vh;
-}
+
 .nav-scroller {
   width: 100%;
   height: 3rem;
@@ -13,29 +7,19 @@ body, .carousel {
   border-width: 1px 0;
   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
-.carousel {
-  margin-bottom: 4rem;
-}
 .carousel-item {
   height: 32rem;
 }
-
-
-
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-/* rtl:begin:ignore */
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
 .featurette-divider {
   margin: 5rem 0;
-}
-.featurette-heading {
-  letter-spacing: -.05rem;
 }
 @media (min-width: 40em) {
   .carousel-caption p {
@@ -80,11 +64,6 @@ body, .carousel {
 
 .bi-instagram {
   margin-right: 10px;
-}
-footer {
-  padding: 30px 0;
-  background-color: #121212;
-  color: #fff;
 }
 
 ul.list-unstyled {
@@ -153,33 +132,10 @@ footer a:hover {
   margin-left: 10px;
 }
 .featurette-image-svg:hover {
-// Add your hover styles here
-// For example:
+
 transform: scale(1.1);
   transition: transform 0.3s;
 }
-button {
-  background-color: #fff;
-  border: 1px solid #0077b5;
-  padding: 5px;
-  position: relative;
-  width: 7.2em;
-  height: 2em;
-  font-size: 17px;
-  border-radius: 0.4em;
-  text-align: center;
-}
-
-button p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  color: #0077b5;
-}
-
 button svg {
   position: absolute;
   top: 0.45em;
@@ -365,6 +321,10 @@ button svg {
 .Btn:active .leftContainer svg {
   transform: scale(1.15);
   transform-origin: top;
+}
+#myCarousel {
+  max-width: 600px; /* Set your desired maximum width */
+  margin: auto; /* Center the carousel */
 }
 
 
@@ -724,4 +684,23 @@ input:-webkit-autofill:active {
 header[data-bs-theme="dark"] nav {
   background-color: #CCCCCC;
   color: #000000;
+}
+
+.carousel-inner {
+  max-width: 100%; /* Ensure the carousel inner takes the full width */
+}
+
+video {
+  width: 100%; /* Make the video fill the width of its container */
+  max-width: 100%; /* Ensure the video does not exceed its container's width */
+}
+
+.container {
+  max-width: 600px; /* Set your desired maximum width for the text container */
+  margin: auto; /* Center the text container */
+}
+
+.custom-play-pause-buttons {
+  max-width: 600px; /* Set your desired maximum width for the button container */
+  margin: auto; /* Center the button container */
 }

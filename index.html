@@ -63,149 +63,11 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
     <title>HOME</title>
-
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/promo.css" rel="stylesheet">
     <link href="assets/css/carousel.css" rel="stylesheet">
-    <style>
-
-        .store {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100px;
-        }
-        #myCarousel {
-            box-shadow: 0 15px 15px rgba(0, 0, 0, 20);
-        }
-        .container {
-            max-width: 1200px;
-        }
-        #likeButton {
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 0;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        .btn {
-            border-radius: 0;
-            padding: 10px 20px;
-        }
-        .carousel-caption h1,
-        .carousel-caption{
-            color: white;
-        }
-        @media (min-width: 768px) {
-            width: 100%;
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-        .btn-primary {
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .bd-mode-toggle .dropdown-menu .active .bi {
-            display: block !important;
-        }
-        .bi-twitter:hover {
-            fill: #1DA1F2;
-        }
-
-        .bi-instagram:hover {
-            fill: #E1306C;
-        }
-        .carousel-inner img {
-            filter: blur(3px);
-        }
-        .custom-play-pause-buttons {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .play-button,
-        .pause-button {
-            width: 40px;
-            height: 40px;
-            border: none;
-            margin: 5px;
-            cursor: pointer;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .play-button::after {
-            content: "\25B6";
-            font-size: 24px;
-            color: black;
-        }
-
-        .pause-button::after {
-            content: "\II";
-            font-size: 24px;
-            color: black;
-        }
-        .styled-element {
-            border-radius: 30px 5px;
-            height: 100px;
-            border: 2px outset rosybrown;
-            padding: 20px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        main {
-            margin-top: 20px;
-        }
-        .styled-element {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .promotion-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .promotion-text {
-            max-width: 60%; /* Adjust as needed */
-        }
-        h2 {
-            color: #ffcc00; /* Choose your desired highlight color */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow values as needed */
-        }
-        .btn{
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-    </style>
-    <link href="assets/css/carousel.css" rel="stylesheet">
 </head>
 <body>
-
-
 <header data-bs-theme="dark" style="margin-bottom: 20px; width: 100%; margin-left: auto; margin-right: auto;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
         <div class="container-fluid">
@@ -229,7 +91,7 @@
                         <a class="nav-link" href="academy.html">EVENT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="store.html">STORE</a>
+                        <a class="nav-link" href="store.html">STORE</a>
                     </li>
                 </ul>
 
@@ -262,10 +124,6 @@
                     </div>
                 </div>
             </div>
-            <div class="custom-play-pause-buttons">
-                <button class="play-button" onclick="playVideo()"></button>
-                <button class="pause-button" onclick="pauseVideo()"></button>
-            </div>
         </div>
     </div>
 
@@ -280,7 +138,7 @@
         </div>
         <div class="promotion-text">
             <h2>Age of Empires IV: Anniversary Edition</h2>
-            <p>Celebrating its first year of delighting millions of global players, the award-winning and best-selling strategy franchise</p>
+            <p>Celebrating its first year of delighting millions of global players, the award winning and best-selling strategy franchise</p>
             <a href="#" class="btn">- 50%</a>
         </div>
     </div>
@@ -288,7 +146,7 @@
     <div class="styled-element">
         <div class="promotion-text">
             <h2>IXION</h2>
-            <p>IXION is an unrelenting, city-building odyssey across the stars. As Administrator of the Tiqqun, DOLOS’ prototype space station</p>
+            <p>IXION is an unrelenting, city-building odyssey across the stars. As Administrator of the Tiqqun, DOLOS’ prototype space station, you are tasked with balancing preservation and exploration as you manage infrastructure, resources and crew.</p>
             <a href="#" class="btn">- 30%</a>
         </div>
         <div class="promotion-image">
@@ -296,7 +154,19 @@
         </div>
     </div>
 
+    <div class="styled-element">
+        <div class="promotion-image">
+            <img src="assets/photo/promo3.jpg" alt="Promotion Image">
+        </div>
+        <div class="promotion-text">
+            <h2>Remnant II</h2>
+            <p>Remnant II pits survivors of humanity against new deadly creatures and god-like bosses across terrifying worlds. Play solo or co-op with two other friends to explore the depths of the unknown to stop an evil from destroying reality itself.</p>
+            <a href="#" class="btn">- 30%</a>
+        </div>
+    </div>
 
+
+    <hr class="featurette-divider">
 
     <div class="row mb-5">
         <div class="col-md-5">
@@ -326,15 +196,20 @@
     </div>
 
     <script>
-        // Add a single event listener to handle all "Like" buttons
-        const likeButtons = document.querySelectorAll(".like-button");
-        likeButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-                const likeCountId = button.getAttribute("data-likecount");
-                const likeCountElement = document.getElementById(likeCountId);
-                let currentLikeCount = parseInt(likeCountElement.textContent);
-                currentLikeCount++;
-                likeCountElement.textContent = currentLikeCount;
+        function handleLikeButtonClick(likeCountId) {
+            const likeCountElement = document.getElementById(likeCountId);
+            let currentLikeCount = parseInt(likeCountElement.textContent);
+            currentLikeCount++;
+            likeCountElement.textContent = currentLikeCount;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const likeButtons = document.querySelectorAll(".like-button");
+            likeButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    const likeCountId = button.getAttribute("data-likecount");
+                    handleLikeButtonClick(likeCountId);
+                });
             });
         });
     </script>
@@ -383,7 +258,7 @@
                     <h4 class="fst-italic">STRATEGY</h4>
                     <p class="mb-0">Command your armies, forge alliances, and outwit your opponents in the ultimate test of strategic prowess!</p>
                     <div class="text-center mt-3">
-                        <button class="Btn">
+                        <button class="Btn like-button" onclick="handleLikeButtonClick('likeCount1')">
                         <span class="leftContainer">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
                                 <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z"></path>
@@ -432,90 +307,89 @@
 
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-3 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success-emphasis">F1® 23</strong>
-                        <h3 class="mb-0">NEWEST</h3>
-                        <div class="mb-1 text-body-secondary">Nov 8</div>
-                        <p class="mb-auto">Be the last to brake in EA SPORTS™ F1® 23</p>
-                        <button>
-                            <p>Follow</p>
-                        </button>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="img-border">
-                            <img src="assets/photo/card1.jpg" width="400" height="270" alt="Thumbnail" />
-                        </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">Far Cry 6</strong>
+                    <h3 class="mb-0">SEQUEL</h3>
+                    <div class="mb-1 text-body-secondary">Nov 11</div>
+                    <p class="mb-auto">Enter the adrenaline-filled world of revolution.</p>
+                    <button>
+                        <p>Follow</p>
+                    </button>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <div class="img-border">
+                        <img src="assets/photo/card2.jpg" width="400" height="270" alt="Thumbnail" />
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-3 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success-emphasis">Far Cry 6</strong>
-                        <h3 class="mb-0">SEQUEL</h3>
-                        <div class="mb-1 text-body-secondary">Nov 11</div>
-                        <p class="mb-auto">Enter the adrenaline-filled world of revolution.</p>
-                        <button>
-                            <p>Follow</p>
-                        </button>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="img-border">
-                            <img src="assets/photo/card2.jpg" width="400" height="270" alt="Thumbnail" />
-                        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">DayZ</strong>
+                    <h3 class="mb-0">SURVIVAL</h3>
+                    <div class="mb-1 text-body-secondary">Nov 8</div>
+                    <p class="mb-auto">How long can you survive a post-apocalyptic world?</p>
+                    <button>
+                        <p>Follow</p>
+                    </button>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <div class="img-border">
+                        <img src="assets/photo/card3.jpg" width="400" height="270" alt="Thumbnail" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-3 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success-emphasis">F1® 23</strong>
-                        <h3 class="mb-0">NEWEST</h3>
-                        <div class="mb-1 text-body-secondary">Nov 8</div>
-                        <p class="mb-auto">Be the last to brake in EA SPORTS™ F1® 23</p>
-                        <button>
-                            <p>Follow</p>
-                        </button>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="img-border">
-                            <img src="assets/photo/card1.jpg" width="400" height="270" alt="Thumbnail" />
-                        </div>
-                    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">Stray Gods</strong>
+                    <h3 class="mb-0">INDIE</h3>
+                    <div class="mb-1 text-body-secondary">Nov 11</div>
+                    <p class="mb-auto">Gods. Romance. Murder. Musical Numbers?!</p>
+                    <button>
+                        <p>Follow</p>
+                    </button>
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-3 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success-emphasis">Stray Gods</strong>
-                        <h3 class="mb-0">INDIE</h3>
-                        <div class="mb-1 text-body-secondary">Nov 11</div>
-                        <p class="mb-auto">Gods. Romance. Murder. Musical Numbers?!</p>
-                        <button>
-                            <p>Follow</p>
-                        </button>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="img-border">
-                            <img src="assets/photo/card4.jpg" width="400" height="270" alt="Thumbnail" />
-                        </div>
+                <div class="col-auto d-none d-lg-block">
+                    <div class="img-border">
+                        <img src="assets/photo/card4.jpg" width="400" height="270" alt="Thumbnail" />
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="img-border">
+                        <img src="assets/photo/card1.jpg" width="400" height="270" alt="Thumbnail" />
+                    </div>
+                </div>
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">F1® 23</strong>
+                    <h3 class="mb-0">NEWEST</h3>
+                    <div class="mb-1 text-body-secondary">Nov 8</div>
+                    <p class="mb-auto">Be the last to brake in EA SPORTS™ F1® 23</p>
+                    <button>
+                        <p>Follow</p>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 
 
     <hr class="featurette-divider">

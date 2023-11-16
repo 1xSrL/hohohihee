@@ -1,3 +1,5 @@
+/* Your existing CSS styles */
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -16,16 +18,21 @@ body, h1, h2, p {
 }
 
 .promotion-image {
-    flex: 1;
+    flex: 0.5;
     overflow: hidden;
-    border-radius: 8px 0 0 8px;
+    border-radius: 8px 8px 8px 8px;
 }
 
 .promotion-image img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px 0 0 8px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.promotion-text {
+    flex: 0.5;
+    padding: 20px;
 }
 
 .promotion-text {
@@ -43,47 +50,34 @@ body, h1, h2, p {
     font-size: 17px;
     margin-bottom: 20px;
 }
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
-
 .container-fluid {
     display: flex;
     margin-top: 15px;
     max-width: 1200px;
     width: 100%;
 }
+
 .nav-item {
     margin-right: 30px;
 }
-.store h2
-{
+
+.store h2 {
     position: absolute;
     color: orange;
-    transition: translate(-50%,-50%);
+    transition: translate(-50%, -50%);
     font-size: 35px;
 }
-.store h2:nth-child(1)
-{
+
+.store h2:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 1px #ffc107;
 }
-.store h2:nth-child(2)
-{
+
+.store h2:nth-child(2) {
     color: #ffc107;
     animation: animate 2s ease-in-out infinite;
 }
+
 @keyframes animate {
     0%, 100% {
         clip-path: polygon(0 45%, 20% 44%, 35% 46%, 51% 56%, 70% 59%, 88% 57%, 100% 50%, 100% 100%, 0 100%);
@@ -92,3 +86,175 @@ body, h1, h2, p {
         clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
     }
 }
+.store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+#myCarousel {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+#likeButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carousel-caption h1,
+.carousel-caption {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, 0.1), inset 0 .125em .5em rgba(0, 0, 0, 0.15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+}
+
+.bi-twitter:hover {
+    fill: #1da1f2;
+}
+
+.bi-instagram:hover {
+    fill: #e1306c;
+}
+
+.carousel-inner img {
+    filter: blur(3px);
+}
+
+.custom-play-pause-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-button,
+.pause-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.play-button::after,
+.pause-button::after {
+    font-size: 24px;
+    color: black;
+}
+
+.play-button::after {
+    content: "\25B6";
+}
+
+.pause-button::after {
+    content: "\II";
+}
+
+.play-button:hover,
+.pause-button:hover {
+    background-color: lightgrey;
+}
+
+.styled-element {
+    border-radius: 30px 5px;
+    height: 100px;
+    border: 2px outset rosybrown;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.styled-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.promotion-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.promotion-text {
+    max-width: 60%;
+}
+
+h2 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.custom-container {
+    max-width: 600px; /* Set your desired maximum width for the container */
+    margin: auto; /* Center the container */
+}
+
+.custom-container .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.custom-container .col-md-6 {
+    padding: 0 15px;
+}
+
+.custom-container .border {
+    border: 1px solid #dee2e6;
+}
+
+.custom-container .img-border {
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.custom-container img {
+    width: 100%;
+    height: auto;
+}
+
+.custom-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add more styles as needed */
