@@ -9,21 +9,6 @@
             likeCountElement.textContent = currentLikeCount;
         }
     </script>
-    <script>
-        function playVideo() {
-            const video = document.querySelector("video");
-            if (video) {
-                video.play();
-            }
-        }
-
-        function pauseVideo() {
-            let video = document.querySelector("video");
-            if (video) {
-                video.pause();
-            }
-        }
-    </script>
     <script src="assets/js/color-modes.js"></script>
     <script>
         let following = false;
@@ -114,18 +99,38 @@
     <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <video class="d-block w-100" controls>
-                    <source src="assets/video/video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>Find More</h1>
+                <div class="row custom-container">
+                    <div class="col-md-8">
+                        <div class="video-container">
+                            <video class="d-block w-100" controls>
+                                <source src="assets/video/video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-container">
+                            <h2>Counter-Strike 2</h2>
+                            <p>
+                                Counter-Strike is back with an exciting new sequel that promises to redefine the gaming experience.
+                                Immerse yourself in the intense action, strategic gameplay, and cutting-edge graphics as you
+                                join forces with players from around the world.
+                            </p>
+                            <p>
+                                Explore new maps, master new weapons, and engage in thrilling multiplayer battles that will keep
+                                you on the edge of your seat. Are you ready for the next level of Counter-Strike?
+                            </p>
+                            <a href="#" class="btn btn-warning">Pre-order Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <div class="store">
         <h2>SPECIAL OFFERS</h2>
@@ -138,8 +143,8 @@
         </div>
         <div class="promotion-text">
             <h2>Age of Empires IV: Anniversary Edition</h2>
-            <p>Celebrating its first year of delighting millions of global players, the award winning and best-selling strategy franchise</p>
-            <a href="#" class="btn">- 50%</a>
+            <p>Celebrating its first year of delighting millions of global players, the award-winning and best-selling strategy franchise</p>
+            <button class="btn btn-warning">- 50%</button>
         </div>
     </div>
 
@@ -147,7 +152,7 @@
         <div class="promotion-text">
             <h2>IXION</h2>
             <p>IXION is an unrelenting, city-building odyssey across the stars. As Administrator of the Tiqqun, DOLOS’ prototype space station, you are tasked with balancing preservation and exploration as you manage infrastructure, resources and crew.</p>
-            <a href="#" class="btn">- 30%</a>
+            <button class="btn btn-warning">- 30%</button>
         </div>
         <div class="promotion-image">
             <img src="assets/photo/promo2.jpg" alt="Promotion Image">
@@ -161,9 +166,10 @@
         <div class="promotion-text">
             <h2>Remnant II</h2>
             <p>Remnant II pits survivors of humanity against new deadly creatures and god-like bosses across terrifying worlds. Play solo or co-op with two other friends to explore the depths of the unknown to stop an evil from destroying reality itself.</p>
-            <a href="#" class="btn">- 30%</a>
+            <button class="btn btn-warning">- 30%</button>
         </div>
     </div>
+
 
 
     <hr class="featurette-divider">
@@ -371,19 +377,19 @@
 
         <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">Madden NFL 24</strong>
+                    <h3 class="mb-0">SPORTS</h3>
+                    <div class="mb-1 text-body-secondary">Nov 8</div>
+                    <p class="mb-auto">Experience the newest iteration of FieldSENSE™ in Madden NFL 24.</p>
+                    <button>
+                        <p>Follow</p>
+                    </button>
+                </div>
                 <div class="col-auto d-none d-lg-block">
                     <div class="img-border">
                         <img src="assets/photo/card1.jpg" width="400" height="270" alt="Thumbnail" />
                     </div>
-                </div>
-                <div class="col p-3 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-success-emphasis">F1® 23</strong>
-                    <h3 class="mb-0">NEWEST</h3>
-                    <div class="mb-1 text-body-secondary">Nov 8</div>
-                    <p class="mb-auto">Be the last to brake in EA SPORTS™ F1® 23</p>
-                    <button>
-                        <p>Follow</p>
-                    </button>
                 </div>
             </div>
         </div>

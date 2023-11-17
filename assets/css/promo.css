@@ -221,10 +221,6 @@ h2 {
     color: #ffcc00;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.custom-container {
-    max-width: 600px; /* Set your desired maximum width for the container */
-    margin: auto; /* Center the container */
-}
 
 .custom-container .row {
     margin-left: -15px;
@@ -256,5 +252,3 @@ h2 {
     border: none;
     cursor: pointer;
 }
-
-/* Add more styles as needed */
