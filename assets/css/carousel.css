@@ -1,4 +1,3 @@
-
 .nav-scroller {
   width: 100%;
   height: 3rem;
@@ -323,8 +322,8 @@ button svg {
   transform-origin: top;
 }
 #myCarousel {
-  max-width: 600px; /* Set your desired maximum width */
-  margin: auto; /* Center the carousel */
+  max-width: 1200px;
+  margin: auto;
 }
 
 
@@ -687,20 +686,34 @@ header[data-bs-theme="dark"] nav {
 }
 
 .carousel-inner {
-  max-width: 100%; /* Ensure the carousel inner takes the full width */
+  max-width: 100%;
 }
 
 video {
-  width: 100%; /* Make the video fill the width of its container */
-  max-width: 100%; /* Ensure the video does not exceed its container's width */
+  width: 100%;
+  max-width: 100%;
+}
+.custom-container {
+  position: relative;
 }
 
-.container {
-  max-width: 600px; /* Set your desired maximum width for the text container */
-  margin: auto; /* Center the text container */
+.video-container {
+  width: 100%;
 }
 
-.custom-play-pause-buttons {
-  max-width: 600px; /* Set your desired maximum width for the button container */
-  margin: auto; /* Center the button container */
+.text-container {
+  padding: 20px;
+  background-color: #2c3e50; /* Light gray background color for visibility */
+  border: 1px solid #ccc; /* Border for visibility */
+  border-radius: 8px; /* Optional: Rounded corners for a nicer look */
+}
+
+.text-container p {
+  margin-bottom: 5px;
+}
+.text-container h2 {
+  margin-bottom: 20px;
+}
+.text-container a {
+  margin-top: 10px;
 }
