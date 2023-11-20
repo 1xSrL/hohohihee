@@ -342,9 +342,9 @@ video {
 
 .text-container {
   padding: 20px;
-  background-color: #2c3e50; /* Light gray background color for visibility */
-  border: 1px solid #ccc; /* Border for visibility */
-  border-radius: 8px; /* Optional: Rounded corners for a nicer look */
+  background-color: #2c3e50;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .text-container p {
