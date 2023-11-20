@@ -882,9 +882,6 @@ header[data-bs-theme="dark"] nav {
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
 }
-.event-details h4.fst-italic {
-  text-decoration: underline;
-}
 .event-card .event-details h4.fst-italic:hover {
   color: #0a58ca;
 }
@@ -899,10 +896,26 @@ header[data-bs-theme="dark"] nav {
 .custom-select select {
   display: block;
   width: 100%;
-  padding: 10px; /* Sesuaikan jika perlu */
-  font-size: 16px; /* Sesuaikan jika perlu */
-  border: 1px solid #ccc; /* Sesuaikan warna dan tebal garis pinggiran */
-  border-radius: 5px; /* Sesuaikan jika perlu */
-  background-color: #fff; /* Sesuaikan warna latar belakang */
-  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar total */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
 }
+
+.page-link.btn-dark {
+  background-color: black;
+  color: white;
+}
+
+.page-link.btn-dark:hover,
+.page-link.btn-dark:focus {
+  background-color: darkgray; /
+}
+
+.page-item.active .page-link.btn-dark {
+  background-color: darkblue;
+  border-color: darkblue;
+}
+
