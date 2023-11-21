@@ -1249,3 +1249,7 @@ header[data-bs-theme="dark"] nav {
   }
 }
 
+.custom-select select {
+  background-color: #ffc107;
+  color:#000000;
+}
