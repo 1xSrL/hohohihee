@@ -146,8 +146,8 @@
         height: 100px;
     }
     .btn-group button {
-            margin-right: 10px; /* Sesuaikan dengan jumlah jarak yang Anda inginkan */
+            margin-right: 10px; 
         }
-.form-control {
-            margin-right: 10px; /* Sesuaikan dengan jumlah margin yang Anda inginkan */
-        }
+    .card-title:hover {
+        color: #FFC107;
+    }
