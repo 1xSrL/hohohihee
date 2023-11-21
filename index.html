@@ -41,68 +41,7 @@
         const followButton = document.getElementById("follow-button");
         followButton.addEventListener("click", toggleFollow);
     </script>
-    <script>
-        // Function to fetch JSON data
-        async function fetchCardData() {
-            try {
-                const response = await fetch('assets/json/index');
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('Error fetching card data:', error);
-                return [];
-            }
-        }
-        async function generateCards() {
-            const container = document.getElementById('card-container');
-            const cardData = await fetchCardData();
 
-            cardData.forEach((card, index) => {
-                const cardHtml = `
-          <div class="row mb-5">
-            <div class="col-md-5">
-              <div class="text-center">
-                <img src="${card.imagePath}" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="position-sticky" style="top: 2rem;">
-                <div class="p-4 mb-3 bg-body-tertiary rounded">
-                  <h4 class="fst-italic">${card.category}</h4>
-                  <p class="mb-0">${card.description}</p>
-                  <div class="text-center mt-3">
-                    <button class="Btn like-button" data-likecount="likeCount${index + 1}" onclick="handleLikeButtonClick('likeCount${index + 1}')">
-                      <span class="leftContainer">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff">
-                          <!-- SVG path for the like icon -->
-                        </svg>
-                        <span class="like">Like</span>
-                      </span>
-                      <span class="likeCount" id="likeCount${index + 1}">${card.likeCount}</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-
-                container.innerHTML += cardHtml; // Append the card HTML to the container
-            });
-        }
-
-        // Function to handle like button click
-        function handleLikeButtonClick(likeCountId) {
-            const index = parseInt(likeCountId.slice(-1)) - 1;
-            updateLikeCount(likeCountId, cardData[index].likeCount += 1);
-        }
-
-        function updateLikeCount(likeCountId, count) {
-            document.getElementById(likeCountId).innerText = count;
-        }
-
-        generateCards();
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -113,8 +52,10 @@
     <link href="assets/css/promo.css" rel="stylesheet">
     <link href="assets/css/carousel.css" rel="stylesheet">
     <script src="assets/js/color-modes.js"></script>
+    <script src="assets/js/function.js"></script>
 </head>
 <body>
+
 <header data-bs-theme="dark" style="margin-bottom: 20px; width: 100%; margin-left: auto; margin-right: auto;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
         <div class="container-fluid">
@@ -246,6 +187,7 @@
 
     <hr class="featurette-divider">
 
+    <div id="card-container">
     <div class="row mb-5">
         <div class="col-md-5">
             <div class="text-center">
@@ -355,7 +297,7 @@
             </div>
         </div>
     </div>
-
+    </div>
 
 
 
