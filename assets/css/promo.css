@@ -145,48 +145,6 @@ body, h1, h2, p {
     filter: blur(3px);
 }
 
-.custom-play-pause-buttons {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.play-button,
-.pause-button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    margin: 5px;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20%;
-}
-
-.play-button::after,
-.pause-button::after {
-    font-size: 24px;
-    color: black;
-}
-
-.play-button::after {
-    content: "\25B6";
-}
-
-.pause-button::after {
-    content: "\II";
-}
-
-.play-button:hover,
-.pause-button:hover {
-    background-color: lightgrey;
-}
-
 .styled-element {
     border-radius: 30px 5px;
     height: 100px;
@@ -250,4 +208,47 @@ h2 {
     padding: 5px 15px;
     border: none;
     cursor: pointer;
+}
+.store h1 {
+    position: absolute;
+    text-shadow: 1px 1px 3px limegreen;
+    transition: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.store h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px limegreen;
+}
+
+.store h1:nth-child(2) {
+    color: #BEEE11;
+    animation: animate 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(0 45%, 20% 44%, 35% 46%, 51% 56%, 70% 59%, 88% 57%, 100% 50%, 100% 100%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
+    }
+}
+.styled-element .promotion-text button {
+    font-family: 'Motiva Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #BEEE11;
+}
+
+.styled-element .promotion-text button {
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: bold;
+    background-color: #4C6B22;
+    color: #BEEE11;
+    border: none;
+    cursor: pointer;
+}
+#card-container img {
+    border-radius: 5px;
 }
