@@ -877,7 +877,7 @@ input:-webkit-autofill:active {
 
 header[data-bs-theme="dark"] nav {
   background-color: #000000;
-  color: #ffffff;
+  color: #202020;
 }
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
