@@ -1,539 +1,97 @@
-<!DOCTYPE html>
-<html lang="en"  data-bs-theme="dark" >
-
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.118.2">
-    <title>EVENT</title>
-<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-            <link href="assets/css/carousel.css" rel="stylesheet">
-                <script src="assets/js/Academy.js"></script>
-                <style>
-                    body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;yn
-                    background-color:#202020;
-                    color: #202020;
-                }
-
-                    header[data-bs-theme="dark"] {
-                    background-color: #212529;
-                    color:#000000;
-                    padding: 40px 0;
-                    text-align: center;
-                }
-
-                    nav {
-                    background-color: #343a40;
-                    color: #000000;
-                    padding: 10px;
-                    text-align: center;
-                }
-
-                    nav ul {
-                    list-style-type: none;
-                    padding: 0;
-                }
-
-                    nav ul li {
-                    display: inline;
-                    margin-right: 20px;
-                }
-
-                    .container {
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    padding: 20px;
-                }
-
-                    .events {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                }
-
-                    .event-card {
-                    width: calc(33.333% - 20px);
-                    margin-bottom: 20px;
-                    background-color: #202020;
-                    color: white;
-                    border-radius: 10px;
-                    overflow: hidden;
-                }
-
-                    .event-card img {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                }
-
-                    .event-card .event-details {
-                    padding: 20px;
-                }
-
-                    footer {
-                    background-color: #333;
-                    color: white;
-                    text-align: center;
-                    padding: 10px 0;
-                    position: relative;
-                    bottom: 0;
-                    width: 100%;
-                }
-
-                    margin: 0;
-                    height: auto;
-                    background: transparent;
-                    padding: 0;
-                    border: none;
-                    cursor: pointer;
-                    }
-
-                    button {
-                    --border-right: 6px;
-                    --text-stroke-color: rgba(255,255,255,0.6);
-                    --animation-color: #37FF8B;
-                    --fs-size: 2em;
-                    letter-spacing: 3px;
-                    text-decoration: none;
-                    font-size: var(--fs-size);
-                    font-family: "Arial";
-                    position: relative;
-                    text-transform: uppercase;
-                    color: transparent;
-                    -webkit-text-stroke: 1px var(--text-stroke-color);
-                }
-
-                    .hover-text {
-                    position: absolute;
-                    box-sizing: border-box;
-                    content: attr(data-text);
-                    color: var(--animation-color);
-                    width: 0%;
-                    inset: 0;
-                    border-right: var(--border-right) solid var(--animation-color);
-                    overflow: hidden;
-                    transition: 0.5s;
-                    -webkit-text-stroke: 1px var(--animation-color);
-                }
-
-                    .button:hover .hover-text {
-                    width: 100%;
-                    filter: drop-shadow(0 0 23px var(--animation-color))
-                }
-                    .btn-sm-custom {
-                    padding: 0.10rem 0.10rem;
-                    font-size: 0.75rem;
-                }
-                    .store {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100px;
-                }
-                    .event-card {
-                    border: 1px solid #fff;
-                }
-                </style>
-            </head>
-            <body>
-            <header>
-                <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example" data-bs-theme="dark">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <a class="navbar-brand col-lg-3 me-5" href="index.html">
-                            <div class="store">
-                                <h2>KALKUN STORE</h2>
-                                <h2>KALKUN STORE</h2>
-                            </div>
-                        </a>
-
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarsExample11">
-                            <ul class="navbar-nav col-lg-6 justify-content-center">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="index.html">HOME</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="academy.html">EVENT</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="store.html">STORE</a>
-                                </li>
-                            </ul>
-
-                            <div class="d-lg-flex col-lg-5 justify-content-end">
-                                <a href="login.html">
-                                    <button class="btn btn-warning">Login</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-
-            <div class="container main-content">
-                <h1 class="text-2xl font-bold uppercase md:text-5xl">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </h1>
-                <p></p>
-                <p></p>
-                <div class="d-flex justify-content">
-                    <p style="font-size: 30px; font-weight: bold; color: white;">Search Event</p>
-                </div>
-                <p></p>
-                <P></P>
-                <div class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 1200px">
-                        <button class="btn btn-warning" type="submit">Search</button>
-                </div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-
-                <div class="custom-select">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Year</option>
-                        <option value="1">2023</option>
-                        <option value="2">2022</option>
-                        <option value="3">2021</option>
-                        <option value="3">2020</option>
-                        <option value="3">2019</option>
-                        <option value="3">2018</option>
-                        <option value="3">2017</option>
-                        <option value="3">2016</option>
-                        <option value="3">2015</option>
-                        <option value="3">2014</option>
-                        <option value="3">2013</option>
-                        <option value="3">2012</option>
-                        <option value="3">2011</option>
-                        <option value="3">2010</option>
-                        <option value="3">2009</option>
-                        <option value="3">2008</option>
-                        <option value="3">2007</option>
-                        <option value="3">2006</option>
-                    </select>
-                </div>
-
-                <div class="custom-select">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Month</option>
-                        <option value="3">January</option>
-                        <option value="3">February</option>
-                        <option value="3">March</option>
-                        <option value="3">April</option>
-                        <option value="3">May</option>
-                        <option value="3">June</option>
-                        <option value="3">July</option>
-                        <option value="3">August</option>
-                        <option value="3">September</option>
-                        <option value="3">October</option>
-                        <option value="3">November</option>
-                        <option value="3">December</option>
-                    </select>
-                </div>
-
-                <div class="custom-select">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Tags</option>
-                        <option value="3">Promo</option>
-                        <option value="3">Newest</option>
-                        <option value="3">Discount</option>
-                    </select>
-                </div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <i class="fa-solid fa-magnifying-glass text-igdx-dark-blue"></i>
-                </div>
-                <i class="fa-solid fa-magnifying-glass text-igdx-dark-blue"></i>
-                <div class="container">
-                    <div class="events">
-                        <div class="event-card position-relative">
-                            <div class="new-badge position-absolute top-0 start-0">
-                                <span class="badge bg-danger">New</span>
-                            </div>
-                            <div class="opacity-100">
-                                <img src="assets/photo/event1.jpg" class="w-full h-[88spx] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">
-                                    <span class="text-pink">Total War: WARHAMMER III</span>
-                                </h4>
-                                <p></p>
-                                <h9>The cataclysmic conclusion to the Total War: WARHAMMER trilogy is here. Rally your forces and step into the Realm of Chaosa dimension of mind-bending </h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="event-card position-relative">
-                            <div class="new-badge position-absolute top-0 start-0">
-                                <span class="badge bg-danger">New</span>
-                            </div>
-                            <div class="opacity-100">
-                                <img src="assets/photo/event2.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">
-                                    <span class="text-pink">Yu-Gi-Oh! Master Duel</span>
-                                </h4>
-                                <p></p>
-                                <h9>Yu-Gi-Oh! MASTER DUEL is the ultimate free-to-play cross-platform strategy card game with fast-paced Duels, stunning HD your forces and step into the Realm of</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="event-card">
-                            <div class="opacity-100">
-                                <img src="assets/photo/event3.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">
-                                    <span class="text-pink">Deady Daylight</span>
-                                </h4>
-                                <p></p>
-                                <h9>Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape.</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="events">
-                        <div class="event-card">
-                            <div class="opacity-100">
-                                <img src="assets/photo/event4.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">
-                                    <span class="text-pink">Sons Of The Forest</span>
-                                </h4>
-                                <p></p>
-                                <h9>Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator new open-world.</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="event-card position-relative">
-                            <div class="new-badge position-absolute top-0 start-0">
-                                <span class="badge bg-danger">New</span>
-                            </div>
-                            <div class="opacity-100">
-                                <img src="assets/photo/event5.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">
-                                    <span class="text-pink">Project Zomboid</span>
-                                </h4>
-                                <p></p>
-                                <h9>Project Zomboid is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial raccoon await the unwar.</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+const postTimeElement = document.getElementById("postTime");
 
 
-                        <div class="event-card position-relative">
-                            <div class="new-badge position-absolute top-0 start-0">
-                                <span class="badge bg-danger">New</span>
-                            </div>
-                            <div class="opacity-100">
-                                <img src="assets/photo/event6.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">For The King II</h4>
-                                <p></p>
-                                <h9>Battle against Fahrul's tyrannical Queen alone or as a party of four players in the sequel to For The King, the massively popular turn-based roguelite tabletop RPG. Will you unravel the once beloved Queen's terrible to For The Kingpopular turn-based.</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+const postTime = new Date(postTimeElement.textContent);
 
-                <div class="container">
-                    <div class="events">
-                        <div class="event-card position-relative">
-                            <div class="new-badge position-absolute top-0 start-0">
-                                <span class="badge bg-danger">New</span>
-                            </div>
-                            <div class="opacity-100">
-                                <img src="assets/photo/event7.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">Cities: Skylines II</h4>
-                                <p></p>
-                                <h9>Raise a city from the ground up and transform it into a thriving metropolis with the most realistic city builder ever. Push your creativity and problem-solving to build on a scale you've never experienced. With deep simulation and a living economy</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="event-card">
-                            <div class="opacity-100">
-                                <img src="assets/photo/event8.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">Dota 2</h4>
-                                <p></p>
-                                <h9>Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+const currentTime = new Date();
 
-                        <div class="event-card position-relative">
-                            <div class="new-badge position-absolute top-0 start-0">
-                                <span class="badge bg-danger">New</span>
-                            </div>
-                            <div class="opacity-100">
-                                <img src="assets/photo/event9.jpg" class="w-full h-[88px] md:h-36 object-cover object-center" alt="">
-                            </div>
-                            <div class="event-details">
-                                <h4 class="fst-italic">Hearts of Iron IV</h4>
-                                <p></p>
-                                <h9>Victory is at your fingertips! Your ability to lead your nation is your supreme weapon, the strategy game Hearts of Iron IV lets you take command of any nation in World War II; the most engaging conflict in world history.nation is your supreme weapon</h9>
-                                <p></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Buy</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="changeText(this)">Like</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link btn-dark" href="#" tabindex="-1">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link btn-dark" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link btn-dark" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link btn-dark" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link btn-dark" href="#">Next</a>
-                    </li>
-                </ul>
-                <footer class="container-fluid bg-dark text-light py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3>Explore</h3>
-                                <ul class="list-unstyled">
-                                    <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-                                    <li><a href="academy.html" class="text-light text-decoration-none">Academy</a></li>
-                                    <li><a href="article.html" class="text-light text-decoration-none">Article</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h3>Follow Us</h3>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#" class="text-light text-decoration-none social-icon">
-                                            <svg class="bi bi-twitter" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="text-light text-decoration-none social-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="text-light text-decoration-none social-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h3>Contact Us</h3>
-                                <address>
-                                    <p>Email: contact@website.com</p>
-                                    <p>Phone: +123-456-7890</p>
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </script>
 
-            </script>
-            <script src="assets/js/color-modes.js">
-                <script src="assets/css/bootstrap.mon.css">
-                </script>
-                <script>
-                    <footer className="container-fluid bg-dark text-light py-5">
-                    </footer>
-                </body>
-            </html>
+const timeDiffInHours = Math.abs(currentTime - postTime) / 36e5;
+
+
+if (timeDiffInHours < 24) {
+    postTimeElement.textContent = "Hari ini";
+} else {
+}
+function changeText(button) {
+    const originalText = button.dataset.originalText || button.innerText;
+
+    if (button.innerText !== originalText) {
+        button.innerText = originalText;
+    } else {
+        button.dataset.originalText = button.innerText;
+        if (button.innerText === 'Buy') {
+            button.innerText = 'Bought!';
+        } else if (button.innerText === 'View') {
+            button.innerText = 'Viewed!';
+        } else if (button.innerText === 'Like') {
+            button.innerText = 'Liked!';
+        }
+    }
+}
+const events = [
+    {
+        "title": "Total War: WARHAMMER III",
+        "image": "assets/photo/event1.jpg",
+        "description": "The cataclysmic conclusion to the Total War: WARHAMMER trilogy is here. Rally your forces and step into the Realm of Chaos, a dimension of mind-bending.",
+        "tags": ["New", "Strategy"],
+        "buttons": ["buy", "View", "Like"]
+    },
+    {
+        "title": "Yu-Gi-Oh! Master Duel",
+        "image": "assets/photo/event2.jpg",
+        "description": "Yu-Gi-Oh! MASTER DUEL is the ultimate free-to-play cross-platform strategy card game with fast-paced Duels, stunning HD graphics, and more.",
+        "tags": ["New", "Card Game"],
+        "buttons": ["Buy", "View", "Like"]
+    },
+];
+function createEventCard(event) {
+    const eventCard = document.createElement('div');
+    eventCard.classList.add('event-card', 'position-relative');
+
+    const image = document.createElement('img');
+    image.src = event.image;
+    image.classList.add('w-full', 'h-[88px]', 'md:h-36', 'object-cover', 'object-center');
+
+    const eventDetails = document.createElement('div');
+    eventDetails.classList.add('event-details');
+
+    const title = document.createElement('h4');
+    title.classList.add('fst-italic', 'text-pink');
+    title.textContent = event.title;
+
+    const description = document.createElement('p');
+    description.textContent = event.description;
+
+    const buttonGroup = document.createElement('div');
+    buttonGroup.classList.add('btn-group');
+
+    event.buttons.forEach(btnText => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.classList.add('btn', 'btn-sm', 'btn-outline-secondary');
+        button.textContent = btnText;
+        buttonGroup.appendChild(button);
+    });
+
+    eventDetails.appendChild(title);
+    eventDetails.appendChild(description);
+    eventDetails.appendChild(buttonGroup);
+    eventCard.appendChild(image);
+    eventCard.appendChild(eventDetails);
+
+    return eventCard;
+}
+
+const eventsContainer = document.querySelector('.events');
+
+events.forEach(event => {
+    const card = createEventCard(event);
+    eventsContainer.appendChild(card);
+});
+
+localStorage.setItem('eventsData', JSON.stringify(events));
+
+
+const storedEvents = JSON.parse(localStorage.getItem('eventsData'));
