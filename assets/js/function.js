@@ -3,13 +3,13 @@ const cardData = [
         "category": "CO-OPERATIVE",
         "description": "Looking for Excitement and Teamwork? Discover the Thrill of Co-operative Games!",
         "imagePath": "assets/photo/about1.jpg",
-        "likeCount": 2
+        "likeCount": 190
     },
     {
         "category": "ADVENTURE",
         "description": "Embark on an epic journey into the unknown with our thrilling adventure game!",
         "imagePath": "assets/photo/about2.jpg",
-        "likeCount": 4
+        "likeCount": 44
     },
     {
         "category": "STRATEGY",
