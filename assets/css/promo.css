@@ -252,3 +252,11 @@ h2 {
 #card-container img {
     border-radius: 5px;
 }
+.btn.btn-warning {
+    transition: background-color 0.5s ease;
+
+}
+
+.btn.btn-warning:hover {
+    background-color: forestgreen;
+}

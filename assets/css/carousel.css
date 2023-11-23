@@ -692,6 +692,7 @@ header[data-bs-theme="dark"] nav {
 video {
   width: 100%;
   max-width: 100%;
+  padding-top: 15px;
 }
 .custom-container {
   position: relative;
