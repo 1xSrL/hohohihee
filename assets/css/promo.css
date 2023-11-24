@@ -260,3 +260,12 @@ h2 {
 .btn.btn-warning:hover {
     background-color: forestgreen;
 }
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.page-link {
+    color: white; /* Set the link text color to white */
+}
