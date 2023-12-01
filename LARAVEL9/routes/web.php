@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\halamanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 
@@ -34,3 +35,7 @@ Route::get('/siswa', function () {
 
 Route::get('siswa',[SiswaController::class,'index']);
 Route::get('siswa/{id}',[SiswaController::class,'detail'])->where('id', '[0-9]+');
+
+Route::get('/', [halamanController::class, 'index']);
+Route::get('/kontak', [halamanController::class, 'kontak']);
+Route::get('/tentang', [halamanController::class, 'tentang']);
