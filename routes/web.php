@@ -39,3 +39,5 @@ Route::get('siswa',[SiswaController::class,'index']);
 Route::get('siswa/{id}',[SiswaController::class,'detail'])->where('id', '[0-9]+');
 
 Route::get('/',[HalamanController::class,'index']);
+Route::get('/kontak',[HalamanController::class,'kontak']);
+Route::get('/tentang',[HalamanController::class,'tentang']);
