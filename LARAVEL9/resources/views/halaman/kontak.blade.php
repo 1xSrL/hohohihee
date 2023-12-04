@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-UA-Compotible" content="ie=edge">
-    <title>Halaman Laravel</title>
-<head>
-<body>
-    <div>
-        <h1>Halaman kontak</h1>
-        <p>qwertyuioplkjhgfdsazxcvbnm</p>
-    </div>
-</body>
-</html>
+@extends('layout/aplikasi')
+
+@section('konten')
+@endsection
+<h1>{{ $judul }}</h1>
+<p>qwertyuioplkjhgfdsazxcvbnm</p>
+<p>
+    <ul>
+        <li>Email: {{ $kontak['email']}}</li>
+        <li>youtube: {{ $kontak['youtube']}}</li>
+    </ul>
+</p>

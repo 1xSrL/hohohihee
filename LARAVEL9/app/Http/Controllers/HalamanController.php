@@ -16,6 +16,13 @@ class HalamanController extends Controller
     }
     function kontak()
     {
-        return view("halaman/kontak");
+        $data = [
+            'judul' => 'Ini Adalah halaman kontak',
+            'kontak' => [
+                'email' => 'susilofaruq@gmail.com',
+                'youtube' => 'selamat hari gue'
+            ]
+        ];
+        return view("halaman/kontak")->with($data);
     }
 }
