@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\siswa;
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
@@ -9,7 +10,8 @@ class SiswaController extends Controller
     //
     function index()
     {
-        return'<h1>Saya SISWA dari Controller</h1>';
+        $data = Siswa::all();
+        return view('siswa/index')->with('data', $data);
     }
      function detail($id)
      {
