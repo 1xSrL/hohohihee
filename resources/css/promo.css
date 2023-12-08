@@ -1,0 +1,271 @@
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.styled-element {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 300px;
+    background-color: #2c3e50;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.promotion-image {
+    flex: 0.5;
+    overflow: hidden;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.promotion-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.promotion-text {
+    flex: 0.5;
+    padding: 20px;
+}
+
+.promotion-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.promotion-text h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.promotion-text p {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.container-fluid {
+    display: flex;
+    margin-top: 15px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.nav-item {
+    margin-right: 30px;
+}
+
+.store h2 {
+    position: absolute;
+    color: orange;
+    transition: translate(-50%, -50%);
+    font-size: 35px;
+}
+
+.store h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffc107;
+}
+
+.store h2:nth-child(2) {
+    color: #ffc107;
+    animation: animate 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(0 45%, 20% 44%, 35% 46%, 51% 56%, 70% 59%, 88% 57%, 100% 50%, 100% 100%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
+    }
+}
+.store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+#myCarousel {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+#likeButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carousel-caption h1,
+.carousel-caption {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, 0.1), inset 0 .125em .5em rgba(0, 0, 0, 0.15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+}
+
+.bi-twitter:hover {
+    fill: #1da1f2;
+}
+
+.bi-instagram:hover {
+    fill: #e1306c;
+}
+
+.carousel-inner img {
+    filter: blur(3px);
+}
+
+.styled-element {
+    border-radius: 30px 5px;
+    height: 100px;
+    border: 2px outset rosybrown;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.styled-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.promotion-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.promotion-text {
+    max-width: 60%;
+}
+
+h2 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.custom-container .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.custom-container .col-md-6 {
+    padding: 0 15px;
+}
+
+.custom-container .border {
+    border: 1px solid #dee2e6;
+}
+
+.custom-container .img-border {
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.custom-container img {
+    width: 100%;
+    height: auto;
+}
+
+.custom-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+.store h1 {
+    position: absolute;
+    text-shadow: 1px 1px 3px limegreen;
+    transition: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.store h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px limegreen;
+}
+
+.store h1:nth-child(2) {
+    color: #BEEE11;
+    animation: animate 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(0 45%, 20% 44%, 35% 46%, 51% 56%, 70% 59%, 88% 57%, 100% 50%, 100% 100%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
+    }
+}
+.styled-element .promotion-text button {
+    font-family: 'Motiva Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #BEEE11;
+}
+
+.styled-element .promotion-text button {
+    font-family: 'Motiva Sans', sans-serif;
+    font-weight: bold;
+    background-color: #4C6B22;
+    color: #BEEE11;
+    border: none;
+    cursor: pointer;
+}
+#card-container img {
+    border-radius: 5px;
+}
+.btn.btn-warning {
+    transition: background-color 0.5s ease;
+
+}
+
+.btn.btn-warning:hover {
+    background-color: forestgreen;
+}
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.page-link {
+    color: white; /* Set the link text color to white */
+}

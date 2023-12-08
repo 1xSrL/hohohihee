@@ -1,0 +1,734 @@
+.nav-scroller {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+.carousel-item {
+  height: 32rem;
+}
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+.featurette-divider {
+  margin: 5rem 0;
+}
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+.bd-placeholder-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.bi-twitter:hover {
+  fill: #1DA1F2;
+}
+
+.bi-instagram:hover {
+  fill: #E1306C;
+}
+
+.bi-whatsapp:hover {
+  fill: #25D366;
+}
+.bi-twitter {
+  margin-right: 10px;
+}
+
+.bi-instagram {
+  margin-right: 10px;
+}
+
+ul.list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.social-icon svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+address {
+  font-size: 16px;
+  margin: 0;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+footer a:hover {
+  color: #e0e0e0;
+}
+.follow-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.follow-button:hover {
+  background-color: #0056b3;
+}
+
+.common-button {
+  padding: 10px 20px;
+  border-radius: 0;
+  transition: background-color 0.3s;
+  height: 100%;
+}
+#likeButton {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.follow-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.follow-button.ml-2 {
+  margin-left: 10px;
+}
+.featurette-image-svg:hover {
+
+transform: scale(1.1);
+  transition: transform 0.3s;
+}
+button svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  height: 1em;
+  fill: #fff;
+}
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+.card {
+  width: 190px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+}
+
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 130px;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.author {
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+.img-border {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-border::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 2) 0%, transparent 100%);
+  z-index: 1;
+}
+.Btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.leftContainer {
+  width: 60%;
+  height: 100%;
+  background-color: #0060ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.leftContainer .like {
+  color: white;
+  font-weight: 600;
+}
+
+.likeCount {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0060ff;
+  font-weight: 600;
+  position: relative;
+  background-color: white;
+}
+
+.likeCount::before {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+.Btn:hover .leftContainer {
+  background-color: #1d4292;
+}
+
+.Btn:active .leftContainer {
+  background-color: #072b7a;
+}
+
+.Btn:active .leftContainer svg {
+  transform: scale(1.15);
+  transform-origin: top;
+}
+#myCarousel {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+
+
+
+=======
+=======
+>>>>>>> Stashed changes
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #fff;
+}
+
+/* this is a recreation of twitter search in css */
+.form {
+  --input-text-color: #fff;
+  --input-bg-color: #283542;
+  --focus-input-bg-color: transparent;
+  --text-color: #006ed3;
+  --active-color: #1b9bee;
+  --width-of-input: 200px;
+  --inline-padding-of-input: 1.2em;
+  --gap: 0.9rem;
+}
+/* form style */
+.form {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: var(--width-of-input);
+  position: relative;
+  isolation: isolate;
+}
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: var(--input-bg-color);
+  border-radius: 30px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* label styling */
+label {
+  width: 100%;
+  padding: 0.8em;
+  height: 40px;
+  padding-inline: var(--inline-padding-of-input);
+  display: flex;
+  align-items: center;
+}
+
+.search,.close-btn {
+  position: absolute;
+}
+/* styling search-icon */
+.search {
+  fill: var(--text-color);
+  left: var(--inline-padding-of-input);
+}
+/* svg -- size */
+svg {
+  width: 17px;
+  display: block;
+}
+/* styling of close button */
+.close-btn {
+  border: none;
+  right: var(--inline-padding-of-input);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--active-color);
+  opacity: 0;
+  visibility: hidden;
+}
+/* styling of input */
+.input {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-color)
+}
+/* input background change in focus */
+.input:focus ~ .fancy-bg {
+  border: 1px solid var(--active-color);
+  background: var(--focus-input-bg-color);
+}
+/* search icon color change in focus */
+.input:focus ~ .search {
+  fill: var(--active-color);
+}
+/* showing close button when typing */
+.input:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
+/* this is a recreation of twitter search in css */
+.form {
+  --input-text-color: #fff;
+  --input-bg-color: #283542;
+  --focus-input-bg-color: transparent;
+  --text-color: #0573a8;
+  --active-color: #1b9bee;
+  --width-of-input: 200px;
+  --inline-padding-of-input: 1.2em;
+  --gap: 0.9rem;
+}
+/* form style */
+.form {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: var(--width-of-input);
+  position: relative;
+  isolation: isolate;
+}
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: var(--input-bg-color);
+  border-radius: 30px;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* label styling */
+label {
+  width: 100%;
+  padding: 0.8em;
+  height: 40px;
+  padding-inline: var(--inline-padding-of-input);
+  display: flex;
+  align-items: center;
+}
+
+.search,.close-btn {
+  position: absolute;
+}
+/* styling search-icon */
+.search {
+  fill: var(--text-color);
+  left: var(--inline-padding-of-input);
+}
+/* svg -- size */
+svg {
+  width: 17px;
+  display: block;
+}
+/* styling of close button */
+.close-btn {
+  border: none;
+  right: var(--inline-padding-of-input);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--active-color);
+  opacity: 0;
+  visibility: hidden;
+}
+/* styling of input */
+.input {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-color)
+}
+/* input background change in focus */
+.input:focus ~ .fancy-bg {
+  border: 1px solid var(--active-color);
+  background: var(--focus-input-bg-color);
+}
+/* search icon color change in focus */
+.input:focus ~ .search {
+  fill: var(--active-color);
+}
+/* showing close button when typing */
+.input:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
+.text-black {
+  color: black;
+}
+.container-fluid {
+  margin-top: 15px;
+}
+.nav-item {
+  margin-right: 30px;
+}
+.store h2
+{
+  position: absolute;
+  color: orange;
+  transition: translate(-50%,-50%);
+  font-size: 35px;
+}
+.store h2:nth-child(1)
+{
+  color: transparent;
+  -webkit-text-stroke: 1px #ffc107;
+}
+.store h2:nth-child(2)
+{
+  color: #ffc107;
+  animation: animate 2s ease-in-out infinite;
+}
+@keyframes animate
+{
+  0%,100%
+  {
+    clip-path: polygon(0 45%, 20% 44%, 35% 46%, 51% 56%, 70% 59%, 88% 57%, 100% 50%, 100% 100%, 0 100%);
+  }
+  50%
+  {
+    clip-path: polygon(0 58%, 16% 62%, 33% 61%, 48% 56%, 59% 48%, 76% 45%, 100% 45%, 100% 100%, 0 100%);
+  }
+}
+
+header[data-bs-theme="dark"] nav {
+  background-color: #CCCCCC;
+  color: #000000;
+}
+
+.carousel-inner {
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 15px;
+}
+.custom-container {
+  position: relative;
+  background: linear-gradient(to bottom, #333333 0%, #333333 70%, transparent 100%);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.video-container {
+  width: 100%;
+}
+
+.text-container {
+  height: 430px;
+  padding: 21px;
+  background-color: #1B2430;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, Helvetica sans-serif;
+  color: #C6D4DF;
+}
+
+@media (max-width: 767px) {
+  .order-md-1,
+  .order-md-2 {
+    order: 1;
+  }
+}
+
+
+.text-container p {
+  margin-bottom: 5px;
+}
+.text-container h2 {
+  margin-bottom: 20px;
+}
+.text-container a {
+  margin-top: 10px;
+}

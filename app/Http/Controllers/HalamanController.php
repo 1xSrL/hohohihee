@@ -8,7 +8,7 @@ class HalamanController extends Controller
 {
     function index()
     {
-    return view("halaman/index");
+    return view("homepage");
     }
     function tentang()
     {
