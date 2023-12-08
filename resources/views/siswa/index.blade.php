@@ -2,6 +2,7 @@
 
 @section('konten')
 <table class="table">
+<a href="/siswa/create" class="btn btn-primary">Tambah Data Siswa</a>
     <thead>
         <tr>
         <th>Nomor Induk</th>
