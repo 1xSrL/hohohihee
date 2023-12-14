@@ -17,7 +17,7 @@ class SiswaController extends Controller
      */
     public function index()
     {
-         $data = siswa::orderBy('nomor_induk', 'desc')->paginate(5);
+         $data = siswa::orderBy('nomor_induk', 'desc')->paginate(3);
                 return view('siswa/index')->with('data', $data);
     }
 

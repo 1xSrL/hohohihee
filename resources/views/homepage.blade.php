@@ -48,11 +48,13 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
     <title>HOME</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/promo.css" rel="stylesheet">
-    <link href="../css/carousel.css" rel="stylesheet">
-    <script src="../js/color-modes.js"></script>
-    <script src="../js/function.js"></script>
+
+   <link rel="stylesheet" href="{{ asset('css/promo.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/carousel.css"') }}">
+   <link rel="stylesheet" href="{{ asset('css/login.css"') }}">
+   <link rel="stylesheet" href="{{ asset('css/promo.css"') }}">
+   <script src="{{ asset('js/color-modes.js') }}"></script>
+    <script src="{{ asset('js/function.js') }}"></script>
 </head>
 <body>
 
@@ -154,7 +156,7 @@
 
     <div class="styled-element">
         <div class="promotion-image">
-            <img src="assets/photo/promo1.jpg" alt="Promotion Image">
+            <img src="asset/photo/promo1.jpg" alt="Promotion Image">
         </div>
         <div class="promotion-text">
             <h2>Age of Empires IV: Anniversary Edition</h2>
@@ -242,7 +244,7 @@
         </div>
         <div class="col-md-5">
             <div class="text-center">
-                <img src="assets/photo/about2.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
+                <img src="public/photo/about2.jpg" alt="Your Image Description" class="img-fluid mx-auto" width="2880" height="1800">
             </div>
         </div>
     </div>
