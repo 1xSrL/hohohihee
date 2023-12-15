@@ -50,11 +50,14 @@
     <title>HOME</title>
 
    <link rel="stylesheet" href="{{ asset('css/promo.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/carousel.css"') }}">
-   <link rel="stylesheet" href="{{ asset('css/login.css"') }}">
-   <link rel="stylesheet" href="{{ asset('css/promo.css"') }}">
+   <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/bootstrap.mon.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/promo.css') }}">
    <script src="{{ asset('js/color-modes.js') }}"></script>
     <script src="{{ asset('js/function.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 </head>
 <body>
 
@@ -156,7 +159,7 @@
 
     <div class="styled-element">
         <div class="promotion-image">
-            <img src="asset/photo/promo1.jpg" alt="Promotion Image">
+            <img src="{{ asset('/photo/promo1.jpg') }}" alt="Promotion Image">
         </div>
         <div class="promotion-text">
             <h2>Age of Empires IV: Anniversary Edition</h2>
